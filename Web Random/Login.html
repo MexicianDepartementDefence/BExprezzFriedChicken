@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assett/src/output.css">
+</head>
+
+<body>
+    <section>
+        <div class="modal h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50">
+
+            <div class="bg-white rounded shadow w-[75%] md:w-1/3">
+                <!-- Modal Header -->
+                <div class="border-b px-4 py-2 flex flex-row justify-between items-center">
+                    <h2 class="font-bold text-xl translate-x-[200px]">Login</h2>
+                    <div class="font-bold text-black text-3xl close-modal">
+                        &times;
+                    </div>
+                </div>
+                <!-- Modal Body -->
+                <div class="p-5 flex flex-col items-center gap-3">
+                    <form action="" method="GET">
+
+                    </form>
+                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""
+                        class="w-[150px] text-center">
+                    <p class="flex items-start font-semibold text-lg">Alamat Email</p>
+                    <input type="email" name="" id="email" placeholder="Masukkan Alamat Email Anda"
+                        class="border w-full rounded-lg py-2 text-center">
+                    <p class="flex items-start font-semibold text-lg">Password</p>
+                    <input type="password" name="" id="password" placeholder="Masukkan Password Anda"
+                        class="border w-full rounded-lg py-2 text-center">
+                    <div class="flex flex-row gap-3 justify-start">
+                        <input type="checkbox" name="" id="checkbox">
+                        <p>Ingat Aku</p>
+
+                    </div>
+                    <p id="errormessage" class="text-red-600" hidden></p>
+                    <button type="submit" class="bg-red-600 w-full text-white h-10 rounded-md">Sign In</button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+<script>
+   const email = document.getElementById("email");
+   const password = document.getElementById("password");
+   const form = document.querySelector("form");
+   const errormessage = document.getElementById("errormessage");
+
+   form.addEventListener("submit", (e) => {
+    const error = [];
+    if (email.value.trim() === ""){
+    error.push("Alamat Email Anda Harus Diisi")
+   }
+
+   if (password.value.length < 4){
+    error.push("Password Anda Kurang Dari 4")
+   }
+
+   if (password.value.trim() === ""){
+    error.push("Password Anda Harus Diisi")
+   }
+
+   if(error.length < 0) {
+    e.preventDefault();
+    errormessage.toggleAttribute("hidden");
+    errormessage.innerHTML = error.join(", ");
+   }
+   })
+
+   
+
+</script>
+
+</html>

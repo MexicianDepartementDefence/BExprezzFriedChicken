@@ -1,40 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B Exprezz Fried Chicken</title>
     <link rel="stylesheet" href="../assett/src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <div class="bg-white">
-        <nav class="flex flex-row justify-between items-center min-h-[40px] p-5">
-            <div class="w-[150px]"><img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""></div>
-            <ul class="flex flex-row gap-5">
-                <li><a href="" class="text-red-600">Home</a></li>
-                <li><a href="" class="text-red-600">Home</a></li>
-                <li><a href="" class="text-red-600">Home</a></li>
-                <li class="text-red-600"><i class="fa-solid fa-moon"></i></li>
-                <li class="text-red-600"><i class="fa-solid fa-cart-shopping"></i></li>
-                <li><div class="border-2 border-red-600 rounded-md py-1">
-                    <a href="" class="text-red-600 px-3">Login</a>
-                </div></li>
-                <li><div class="border-2 border-red-600 rounded-md py-1">
-                    <a href="" class="text-red-600 px-3">Register</a>
-                </div>
+
+<body class="bg-gray-100 overflow-x-hidden max-h-screen">
+    <header class="sticky z-20 top-0" id="header">
+        <div class="bg-white">
+            <nav class="w-full flex flex-row justify-between items-center min-h-[2px] px-10">
+                <div class="w-[150px]"><img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""></div>
+                
+                <ul class="md:flex flex-row gap-5 items-center hidden">
+                    <li><a href="" class="text-red-600">Home</a></li>
+                    <li><a href="" class="text-red-600">Our Menu</a></li>
+                    <li class="text-red-600"><i class="fa-solid fa-moon"></i></li>
+                    <li class="text-red-600"><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li>
+                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2">
+                            <a href="../Web Random/Login.html" class="text-red-600 show-modal">Login</a>
+                        </div>
+                        
                     </li>
-            </ul>
 
-        </nav>
+                    
+                </ul>
+<div class="text-red-600 block md:hidden text-center"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </div>
+        </div>
+
+    </header>
+
+    </div>
+<!-- Beranda -->
+
+
+<!-- Modal -->
+<section id="modal">
+    
+
+
+ <!-- Slider -->
+    <section>
+    
+ <!-- Implement the carousel -->
+ <div class="relative w-[460px] md:w-[1000px] mx-auto mt-10">
+    <div class="slide relative">
+        <img class="w-full h-[300px] md:h-[500px] object-cover"
+            src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-1.jpeg">
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower One Caption</div>
     </div>
 
-    <div class="bg-BFC">
-        <p>Halo</p>
+    <div class="slide relative">
+        <img class="w-full h-[300px] md:h-[500px] object-cover"
+            src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-2.jpeg">
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower Two Caption</div>
     </div>
+
+    <div class="slide relative">
+        <img class="w-full h-[300px] md:h-[500px] object-cover"
+            src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-3.jpeg">
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower Three Caption
+        </div>
+    </div>
+
+    <!-- The previous button -->
+    <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+        onclick="moveSlide(-1)">❮</a>
+
+    <!-- The next button -->
+    <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+        onclick="moveSlide(1)">❯</a>
+
+</div>
+<br>
+
+<!-- The dots -->
+<div class="flex justify-center items-center space-x-5 md:space-x-5">
+    <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
+    <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
+    <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
+</div>
+    
+        <p class="text-red-600 font-bold text-xl ml-[1125px]">See All Promo</p>
+        </div>
+    </section>
+
+
+    <section>
+
+    </section>
+    
 
     
-   
+
+
+    <footer class="bg-red-600 flex flex-row justify-between items-center p-8 mt-10">
+        <div class="w-[150px]"><img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""></div>
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-row gap-5">
+                <a href="" class="text-white text-5xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="text-white text-5xl"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" class="text-white text-5xl"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="text-sm md:text-lg text-white">
+                <p>Jl. Raya Cibarusah, Kabupaten Bekasi</p>
+            </div>
+        </div>
+
+    </footer>
 </body>
+<script>
+
+    // Nav Scroll
+    window.onscroll = function () { menu() };
+    let ystatus = false;
+
+    function menu() {
+        if (document.documentElement.scrollTop > 20) {
+            document.getElementById("header").classList.add("bg-white");
+            document.getElementById("header").classList.add("shadow-lg")
+        }
+
+        else {
+            document.getElementById("header").classList.remove("bg-white");
+            document.getElementById("header").classList.remove("shadow-lg")
+        }
+    }
+
+// Slider
+    // set the default active slide to the first one
+    let slideIndex = 1;
+        showSlide(slideIndex);
+
+        // change slide with the prev/next button
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+
+        // change slide with the dots
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            // hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+
+            // remove active status from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-yellow-500');
+                dots[i].classList.add('bg-red-600');
+            }
+
+            // show the active slide
+            slides[slideIndex - 1].classList.remove('hidden');
+
+            // highlight the active dot
+            dots[slideIndex - 1].classList.remove('bg-red-600');
+            dots[slideIndex - 1].classList.add('bg-yellow-500');
+       
+       }
+
+       // Modal
+
+       const modal = document.querySelector(".modal");
+       const showmodal = document.querySelector(".show-modal");
+       const closemodal = document.querySelectorAll(".close-modal");
+
+       showmodal.addEventListener("click", function(){
+        modal.classList.remove("hidden")
+       })
+
+       closemodal.forEach(close => {closemodal.addEventListener("click", function(){
+        modal.classList.add("hidden")
+       })})
+       
+</script>
 
 </html>
