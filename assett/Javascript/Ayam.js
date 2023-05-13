@@ -1,3 +1,24 @@
+// Hamburger Menu
+
+let xstatus = false;
+
+
+
+function showHideMenu() {
+  let menu = document.getElementById("daftarMenu");
+  if(xstatus) {
+    menu.classList.add("flex");
+    menu.classList.remove("hidden");
+    xstatus = false;
+  }
+  else {
+    menu.classList.remove("flex");
+    menu.classList.add("hidden");
+    xstatus = true;
+  }
+}
+
+
 // Nav Scroll
 window.onscroll = function () { menu() };
 let ystatus = false;

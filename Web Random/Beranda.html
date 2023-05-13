@@ -18,8 +18,8 @@
                 </div>
 
                 <ul class="md:flex flex-row gap-5 items-center hidden">
-                    <li><a href="" class="text-red-600">Home</a></li>
-                    <li><a href="" class="text-red-600">Our Menu</a></li>
+                    <li><a href="" class="text-red-600 dark:text-white">Home</a></li>
+                    <li><a href="" class="text-red-600 dark:text-white">Our Food</a></li>
                     <li class="flex items-center">
                         <input type="checkbox" class="hidden" id="dark-toggle">
                         <label for="dark-toggle">
@@ -28,46 +28,43 @@
                             </div>
                         </label>
                     <li>
-                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2">
-                            <a href="../Web Random/Login.html" class="text-red-600 show-modal">Login</a>
+                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2 dark:border-white">
+                            <a href="../Web Random/Login.html" class="text-red-600 show-modal dark:text-white">Login</a>
                         </div>
 
                     </li>
 
 
                 </ul>
-                <div class="text-red-600 block md:hidden text-center"><i class="fa-solid fa-bars"></i></div>
+                <div class="text-red-600 block md:hidden text-center dark:text-white" onclick="showHideMenu()"><i class="fa-solid fa-bars"></i></div>
             </nav>
+
+            <div class="hidden flex-col transition-all ease-in-out duration-200 md:hidden w-2/4 dark:bg-black" id="daftarMenu">
+                <a href="" class="text-red-600">Home</a>
+                <a href="" class="text-red-600">Our Menu</a>
+                <a href="" class="text-red-600">Login</a>
+                <a href="" class="flex flex-col"><input type="checkbox" class="hidden" id="dark-toggle">
+                    <label for="dark-toggle">
+                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                        </div>
+                    </label>
+                <li></a>
+            </div>
         </div>
         </div>
 
     </header>
 
     </div>
-    <!-- Beranda -->
-    <section id="header">
-       <div class="bg-BFC bg-center h-screen w-[100%] md:w-screen">
-        <div class="flex flex-col justify-center gap-[72px]">
-            <h1 class="text-5xl font-bold text-justify mt-[250px] text-white">B Exprezz Fried Chicken</h1>
-            <p class="text-lg font-medium text-justify text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                harum, quis molestias, delectus enim, deleniti pariatur minima voluptas dolores rerum facere voluptatum
-                ipsa neque non perferendis consequuntur maxime iure necessitatibus.</p>
-        </div>
-    </div>
-
-    <div class="bg-red-600 w-screen h-10">
-        <p class="text-red-600">halo</p>
-    </div> 
-    </section>
     
-
-
-
-
+    </section>
+    <!-- Promo -->
         <!-- Slider -->
-        <section id="article">
-            <!-- Implement the carousel -->
-            <div class="relative w-[460px] md:w-[1000px] mx-auto mt-10">
+        <section id="article" class="mt-52">
+            <div class="flex flex-row gap-6 justify-between items-center">
+                <a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:translate-x-44" onclick="moveSlide(-1)"><</a>
+                <div class="relative w-[460px] md:w-[1000px] mx-auto">
                 <div class="slide relative">
                     <img class="w-full h-[300px] md:h-[500px] object-cover"
                         src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-1.jpeg">
@@ -89,15 +86,12 @@
                     </div>
                 </div>
 
-                <!-- The previous button -->
-                <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
-                    onclick="moveSlide(-1)">❮</a>
-
-                <!-- The next button -->
-                <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
-                    onclick="moveSlide(1)">❯</a>
-
             </div>
+
+<a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:-translate-x-44" onclick="moveSlide(1)">></a>
+            </div>
+            <!-- Implement the carousel -->
+            
             <br>
 
             <!-- The dots -->
@@ -136,11 +130,6 @@
 <button class="bg-red-600 text-white py-3 px-6 rounded-full font-semibold"><a href="../Web Random/Menu.html">See More ></a></button>
 </div>
         </section>
-
-
-
-
-
         <footer class="bg-red-600 flex flex-row justify-between items-center p-8 mt-10">
             <div class="w-[150px]"><img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""></div>
             <div class="flex flex-col gap-6">
