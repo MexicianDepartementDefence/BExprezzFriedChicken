@@ -4,6 +4,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+    textColor :
+      {"Yellow" : "#FFD700"},
+      backgroundColor :
+      {"Dark" : "#282B3D"},
     },
   },
   plugins: [],

@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-gray-100 overflow-x-hidden max-h-screen dark:bg-black">
+<body class="bg-gray-200 overflow-x-hidden max-h-screen dark:bg-Dark">
     <header class="fixed z-20 top-0 w-full md:w-full" id="header">
-        <div class="dark:bg-black">
+        <div class="dark:bg-Dark">
             <nav class="w-full flex flex-row justify-between items-center py-2 px-5">
                 <div class="w-[100px] ml-10"><img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="">
                 </div>
 
                 <ul class="md:flex flex-row gap-5 items-center hidden">
-                    <li><a href="" class="text-red-600 dark:text-white">Home</a></li>
-                    <li><button class="relative text-red-600 dark:text-white focus:outline-none group">
+
+                    <li><a href="../Web Random/Beranda.html" class="text-red-600 dark:text-Yellow">Home</a></li>
+                    
+                    <li><button class="relative text-red-600 dark:text-Yellow focus:outline-none group">
                         <a href="#">Our Menu</a>
                     </button></li>
                     
@@ -32,10 +34,14 @@
                             </div>
                         </label>
                     <li>
-                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2 dark:border-white">
-                            <a href="#" class="text-red-600 show-modal dark:text-white" onclick="KlikModal()">Login</a>
+                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2 dark:border-yellow-400">
+                            <a href="#" class="text-red-600 show-modal dark:text-Yellow" onclick="KlikModal()">Login</a>
                         </div>
 
+                    </li>
+
+                    <li>
+                        <div class=""></div>
                     </li>
 
 
@@ -43,11 +49,12 @@
                 <div class="text-red-600 block md:hidden text-center dark:text-white" onclick="showHideMenu()"><i class="fa-solid fa-bars"></i></div>
             </nav>
 
-            <div class="hidden flex-col transition-all ease-in-out duration-200 md:hidden w-2/4 dark:bg-black bg-red-600 translate-x-80" id="daftarMenu">
-                <a href="" class="text-red-600">Home</a>
-                <a href="" class="text-red-600">Our Menu</a>
-                <a href="" class="text-red-600">Login</a>
+            <div class="hidden flex-col transition-all ease-in-out duration-200 md:hidden w-2/4 dark:bg-Dark bg-red-600 translate-x-80" id="daftarMenu">
+                <a href="" class="text-red-600 dark:text-Yellow">Home</a>
+                <a href="" class="text-red-600 dark:text-Yellow">Our Menu</a>
+                <a href="" class="text-red-600 dark:text-Yellow">Login</a>
                 <a href="" class="flex flex-col">
+                    <span class="text-red-600 dark:text-Yellow"></span>
                     <input type="checkbox" class="hidden" id="dark-toggle">
                     <label for="dark-toggle">
                         <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
@@ -65,38 +72,64 @@
     <!-- Modal Login -->
 
     <section>
-        <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20" id="Modal">
+        <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20 scale-100 transition ease-in-out duration-200" id="Modal">
 
-            <div class="bg-white rounded shadow w-[75%] md:w-1/3">
+            <div class="bg-white rounded shadow w-[70%] md:w-2/4">
                 <!-- Modal Header -->
-                <div class="border-b px-4 py-2 flex flex-row justify-between items-center">
-                    <h2 class="font-bold text-xl translate-x-[200px]">Login</h2>
+                <div class="border-b px-4 py-2 flex flex-row justify-end">
                     <div class="font-bold text-black text-3xl cursor-pointer" onclick="TutupModal()">
                         &times;
                     </div>
                 </div>
                 <!-- Modal Body -->
-                <div class="p-5 flex flex-col items-center gap-3">
-                    <form action="" method="GET">
-<img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""
-                        class="w-[150px] text-center">
-                    <p class="flex items-start font-semibold text-lg">Alamat Email</p>
-                    <input type="email" name="email" id="email" placeholder="Masukkan Alamat Email Anda"
-                        class="border w-full rounded-lg py-2 text-center">
-                    <p class="flex items-start font-semibold text-lg">Password</p>
-                    <input type="password" name="password" id="password" placeholder="Masukkan Password Anda"
-                        class="border w-full rounded-lg py-2 text-center">
-                    <div class="flex flex-row gap-3 justify-start">
-                        <input type="checkbox" name="checkbox" id="checkbox">
-                        <p>Ingat Aku</p>
-
+                <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                        <img class="mx-auto h-[150px] w-auto" src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png"
+                            alt="Your Company">
+                        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your
+                            account</h2>
                     </div>
-                    <p id="errormessage" class="text-red-600 flex justify-center items-center" hidden></p>
-                    <button type="submit" class="bg-red-600 w-full text-white h-10 rounded-md">Sign In</button>
-                    </form>
-                    
+            
+                    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                        <form class="space-y-6" action="#" method="POST">
+                            <div>
+                                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                                <div class="mt-2">
+                                    <input id="email" name="email" type="email" autocomplete="email"
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+            
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                                    <div class="text-sm">
+                                        <a href="#" class="font-semibold text-red-600 hover:text-red-500">Forgot password?</a>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <input id="password" name="password" type="password" autocomplete="current-password"
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
 
-
+                            <div>
+                                <div class="flex gap-4">
+                                    <p id="errormessage" class="text-red-600 font-semibold text-center" hidden></p>
+                                </div>
+                            </div>
+            
+                            <div>
+                                <button type="submit"
+                                    class="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Sign
+                                    in</button>
+                            </div>
+                        </form>
+            
+                        <p class="mt-10 text-sm text-center text-gray-500">
+                            Are You New Here?<a href="#" class="font-semibold leading-6 text-red-600 hover:text-red-500">Register</a>
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -110,32 +143,24 @@
         <!-- Slider -->
         <section id="article" class="mt-52">
             <div class="flex flex-row gap-6 justify-between items-center"> 
-                <a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:translate-x-44" onclick="moveSlide(-1)"><</a>
+                <a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:translate-x-44 dark:bg-yellow-400" onclick="moveSlide(-1)"><</a>
                 <div class="relative w-[460px] md:w-[1000px] mx-auto">
                 <div class="slide relative">
-                    <img class="w-full h-[300px] md:h-[500px] object-cover"
-                        src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-1.jpeg">
-                    <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower One
-                        Caption</div>
+                    <img class="w-full h-[200px] md:h-[500px] object-cover"
+                        src="../assett/img/Banner 1-2.png">
                 </div>
 
                 <div class="slide relative">
-                    <img class="w-full h-[300px] md:h-[500px] object-cover"
-                        src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-2.jpeg">
-                    <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Bunga Bangkai</div>
+                    <img class="w-full h-[200px] md:h-[500px] object-cover" src="../assett/img/Banner 1.png">
                 </div>
 
                 <div class="slide relative">
-                    <img class="w-full h-[300px] md:h-[500px] object-cover"
-                        src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-3.jpeg">
-                    <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower Three
-                        Caption
-                    </div>
+                    <img class="w-full h-[200px] md:h-[500px] object-cover" src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-3.jpeg">
                 </div>
 
             </div>
 
-<a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:-translate-x-44" onclick="moveSlide(1)">></a>
+<a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:-translate-x-44 dark:bg-yellow-400" onclick="moveSlide(1)">></a>
             </div>
             <!-- Implement the carousel -->
             
@@ -148,36 +173,44 @@
                 <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
             </div>
 
-            <p class="text-red-600 font-bold text-xl ml-[1125px]">See All Promo</p>
+            <p class="text-red-600 dark:text-Yellow font-bold text-xl ml-[1125px]">See All Promo</p>
             </div>
         </section>
 
 <!-- Menu -->
         <section>
 <div class="flex flex-col mt-10 justify-center items-center gap-8">
-    <h1 class="text-3xl font-bold text-red-600">Our Menu</h1>
+    <h1 class="text-3xl font-bold text-red-600 dark:text-Yellow">Our Menu</h1>
 <div class="flex flex-col md:flex-row gap-5">
-    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600">
-<img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-<h3 class="font-semibold text-lg">Fried Chicken</h3>
+    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600 dark:border-0 dark:bg-[#69718E]">
+<img src="../assett/img/Fried Chicken.png" alt="" class="w-[150px]">
+<h3 class="font-semibold text-lg dark:text-white">Fried Chicken</h3>
     </div>
 
 
-    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600">
-        <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-        <h3 class="font-semibold text-lg">Desert</h3>
+    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600 dark:border-0 dark:bg-[#69718E]">
+        <img src="../assett/img/Desert.png" alt="" class="w-[150px]">
+        <h3 class="font-semibold text-lg dark:text-white">Desert</h3>
             </div>
 
-            <div class="flex flex-col justify-center gap-6 items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600">
-                <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-                <h3 class="font-semibold text-lg">Drink</h3>
+            <div class="flex flex-col justify-center gap-6 items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600 dark:border-0 dark:bg-[#69718E]">
+                <img src="../assett/img/Drink.png" alt="" class="w-[150px]">
+                <h3 class="font-semibold text-lg dark:text-white">Drink</h3>
                     </div>
 </div>
 
-<button class="bg-red-600 text-white py-3 px-6 rounded-full font-semibold"><a href="../Web Random/Menu.html">See More ></a></button>
+<button class="bg-red-600 dark:bg-yellow-400 text-white py-3 px-6 rounded-full font-semibold"><a href="../Web Random/Menu.html">See More ></a></button>
 </div>
         </section>
-        <footer class="bg-red-600 flex flex-row justify-between items-center p-8 mt-10">
+
+<section>
+    <div class="flex flex-col justify-center items-center">
+        <p class="text-red-600 text-lg font-semibold dark:text-Yellow"></p>
+    </div>
+</section>
+
+
+        <footer class="bg-red-600 dark:bg-[#FFD700] flex flex-row justify-between items-center p-8 mt-10">
             <div class="w-[150px]"><img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""></div>
             <div class="flex flex-col gap-6">
                 <div class="flex flex-row gap-5">

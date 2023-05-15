@@ -1,3 +1,29 @@
+// Darkmode Toggle
+const darktoggle = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+
+darktoggle.addEventListener("click", function(){
+    if(darktoggle.checked){
+html.classList.add("dark");
+    }
+    else {
+        html.classList.remove("dark");
+    }
+})
+
+// Login Modal
+
+function KlikModal(){
+     document.getElementById("Modal").classList.add("flex");
+     document.getElementById("Modal").classList.remove("hidden");
+ 
+}
+
+function TutupModal(){
+ document.getElementById("Modal").classList.add("hidden");
+ document.getElementById("Modal").classList.remove("flex");
+}
+
 // Hamburger Menu
 
 let xstatus = false;
@@ -79,18 +105,6 @@ function showSlide(n) {
 }
 
 
-// Darkmode Toggle
-const darktoggle = document.querySelector("#dark-toggle");
-const html = document.querySelector("html");
-
-darktoggle.addEventListener("click", function(){
-    if(darktoggle.checked){
-html.classList.add("dark");
-    }
-    else {
-        html.classList.remove("dark");
-    }
-})
 
 // Validasi
 
@@ -121,15 +135,3 @@ if(error.length > 0) {
 }
 })
 
-// Login Modal
-
-function KlikModal(){
-     document.getElementById("Modal").classList.add("flex");
-     document.getElementById("Modal").classList.remove("hidden");
- 
-}
-
-function TutupModal(){
- document.getElementById("Modal").classList.add("hidden");
- document.getElementById("Modal").classList.remove("flex");
-}

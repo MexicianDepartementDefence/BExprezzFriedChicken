@@ -13,7 +13,7 @@
 
 <body>
 
-    <body class="bg-gray-100 overflow-x-hidden max-h-screen dark:bg-black">
+    <body class="bg-white overflow-x-hidden max-h-screen dark:bg-black">
         <header class="fixed z-20 top-0 w-full" id="header">
             <div class="bg-white dark:bg-black">
                 <nav class="w-full flex flex-row justify-between items-center py-8 px-5">
@@ -35,7 +35,7 @@
                             </label>
                         <li>
                             <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2 dark:border-white">
-                                <a href="../Web Random/Login.html" class="text-red-600 show-modal dark:text-white">Login</a>
+                                <a href="#" class="text-red-600 show-modal dark:text-white" onclick="KlikModal()">Login</a>
                             </div>
 
                         </li>
@@ -51,41 +51,83 @@
 
         </div>
 
+        <section>
+          <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20" id="Modal">
+  
+              <div class="bg-white rounded shadow w-[75%] md:w-1/3">
+                  <!-- Modal Header -->
+                  <div class="border-b px-4 py-2 flex flex-row justify-between items-center">
+                      <h2 class="font-bold text-xl translate-x-[200px]">Login</h2>
+                      <div class="font-bold text-black text-3xl cursor-pointer" onclick="TutupModal()">
+                          &times;
+                      </div>
+                  </div>
+                  <!-- Modal Body -->
+                  <div class="p-5 flex flex-col items-center gap-3">
+                      <form action="" method="GET" class=" flex flex-col items-center gap-3">
+  <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt=""
+                          class="w-[150px] text-center">
+                      <p class="flex items-start font-semibold text-lg">Alamat Email</p>
+                      <input type="email" name="email" id="email" placeholder="Masukkan Alamat Email Anda"
+                          class="border w-full rounded-lg py-2 text-center">
+                      <p class="flex items-start font-semibold text-lg">Password</p>
+                      <input type="password" name="password" id="password" placeholder="Masukkan Password Anda"
+                          class="border w-full rounded-lg py-2 text-center">
+                      <div class="flex flex-row gap-3 justify-start">
+                          <input type="checkbox" name="checkbox" id="checkbox">
+                          <p>Ingat Aku</p>
+  
+                      </div>
+                      <p id="errormessage" class="text-red-600 flex justify-center items-center" hidden></p>
+                      <button type="submit" class="bg-red-600 w-full text-white h-10 rounded-md">Sign In</button>
+                      </form>
+                      
+  
+  
+                  </div>
+  
+              </div>
+  
+          </div>
+  
+      </section>
+
+
         <!-- Swiper -->
 
 <section>
     
         <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 mt-44"> 
-          <h1 class="dark:text-white text-3xl font-semibold mb-10">Our Chicken</h1>
+          <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10">Fried Chicken</h1>
             <div class="swiper-wrapper flex flex-row gap-6">
               <div class="swiper-slide">
-                <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
-                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-                    <p class="font-semibold text-lg dark:text-white">Fried Chicken</p>
+                  <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                    <a href="#" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
-                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-                    <p class="font-semibold text-lg dark:text-white">Fried Chicken</p>
+                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                    <p class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
-                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-                    <p class="font-semibold text-lg dark:text-white">Fried Chicken</p>
+                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                    <p class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
-                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-                    <p class="font-semibold text-lg dark:text-white">Fried Chicken</p>
+                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                    <p class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
-                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px]">
-                    <p class="font-semibold text-lg dark:text-white">Fried Chicken</p>
+                    <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                    <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</p>
                 </div>
               </div>
              
@@ -95,6 +137,123 @@
     </section>
 
 
+    <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 bg-gray-200"> 
+      <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10 mt-10">Drink</h1>
+        <div class="swiper-wrapper flex flex-row gap-6">
+          <div class="swiper-slide">
+            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+                <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+                <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+                <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                <a class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+                <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                <p class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+                <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+                <p class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+            </div>
+          </div>
+         
+          </div>
+        </div>
+      </div>
+</section>
+
+<div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6"> 
+  <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10 mt-10">Desert</h1>
+    <div class="swiper-wrapper flex flex-row gap-6">
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+     
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 bg-gray-200"> 
+  <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10 mt-10">Meal</h1>
+    <div class="swiper-wrapper flex flex-row gap-6">
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px]">
+            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fried Chicken</a>
+        </div>
+      </div>
+     
+      </div>
+    </div>
+  </div>
+</section>
 
 
         <footer class="bg-red-600 flex flex-row justify-between items-center p-8 mt-28">
