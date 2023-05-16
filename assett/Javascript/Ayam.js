@@ -102,6 +102,10 @@ function showSlide(n) {
     dots[slideIndex - 1].classList.remove('bg-red-600');
     dots[slideIndex - 1].classList.add('bg-black');
 
+    setInterval(function() {
+        nextSlide()
+      }, 5000);
+
 }
 
 

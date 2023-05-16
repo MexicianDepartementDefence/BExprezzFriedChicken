@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form with Tailwind CSS and JavaScript</title>
+  <link rel="stylesheet" href="../asset/css/output.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="max-w-md mx-auto mt-4 p-6 border border-gray-300 rounded-md">
+    <h1 class="text-2xl font-medium mb-4">Registration Form</h1>
+    <form id="registrationForm">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium">Name</label>
+        <input type="text" id="name" name="name" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium">Email</label>
+        <input type="email" id="email" name="email" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-gray-700 font-medium">Password</label>
+        <input type="password" id="password" name="password" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+      </div>
+      <div class="mb-6">
+        <label for="confirmPassword" class="block text-gray-700 font-medium">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+      </div>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Register</button>
+      <p id="successMessage" class="hidden mt-2 text-green-500">Registration successful!</p>
+    </form>
+  </div>
+
+  <script>
+    const registrationForm = document.getElementById('registrationForm');
+    const successMessage = document.getElementById('successMessage');
+
+    registrationForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Simulate registration process (you can replace this with your actual registration logic)
+      setTimeout(() => {
+        registrationForm.reset();
+        successMessage.classList.remove('hidden');
+      }, 1000);
+    });
+  </script>
+</body>
+
+</html>
