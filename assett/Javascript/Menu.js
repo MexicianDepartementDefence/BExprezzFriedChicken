@@ -1,6 +1,12 @@
+// Ganti Gambar
+const Gambar = document.getElementById("Gambar");
+function GantiGambar(){   
+      Gambar.src = "../assett/img/Logo Dark Mode.png";
+}
+
 // Nav Scroll
 window.onscroll = function () { menu() };
-let ystatus = false;
+
 
 function menu() {
     if (document.documentElement.scrollTop > 20) {

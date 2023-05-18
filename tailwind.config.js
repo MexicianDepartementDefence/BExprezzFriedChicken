@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     extend: {
     textColor :
-      {"Yellow" : "#FFD700"},
+      {"Red" : "#C70039"},
       backgroundColor :
-      {"Dark" : "#282B3D"},
+      {"Dark" : "#1E1E1E"},
     },
   },
   plugins: [],

@@ -11,6 +11,12 @@ html.classList.add("dark");
     }
 })
 
+// Ganti Gambar
+const Gambar = document.getElementById("Gambar");
+function GantiGambar(){   
+      Gambar.src = "../assett/img/Logo Dark Mode.png";
+}
+
 // Login Modal
 
 function KlikModal(){
@@ -101,10 +107,6 @@ function showSlide(n) {
     // highlight the active dot
     dots[slideIndex - 1].classList.remove('bg-red-600');
     dots[slideIndex - 1].classList.add('bg-black');
-
-    setInterval(function() {
-        nextSlide()
-      }, 5000);
 
 }
 
