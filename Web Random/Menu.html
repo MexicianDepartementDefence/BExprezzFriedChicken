@@ -13,9 +13,9 @@
 
 <body>
 
-  <body class="bg-white overflow-x-hidden max-h-screen dark:bg-Dark">
+  <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
     <header class="fixed z-20 top-0 w-full" id="header">
-      <div class="bg-white dark:bg-Dark">
+      <div class="bg-[#FFF6F0] dark:bg-Dark">
         <nav class="w-full flex flex-row justify-between items-center py-8 px-5">
           <div class="w-[100px] ml-10">
             <img src="../assett/img/B Exprezz Chicken Logo.png" alt="" id="Gambar">
@@ -24,6 +24,7 @@
           <ul class="md:flex flex-row gap-5 items-center hidden">
             <li><a href="../Web Random/Beranda.html" class="text-red-700">Home</a></li>
             <li><a href="../Web Random/Menu.html" class="text-red-700">Our Menu</a></li>
+            <li><a href="../Web Random/Menu.html" class="text-red-700">Delivery</a></li>
             <li class="flex items-center">
               <input type="checkbox" class="hidden" id="dark-toggle" onclick="GantiGambar()">
               <label for="dark-toggle">
@@ -32,6 +33,7 @@
                   </div>
                 </div>
               </label>
+
             <li>
               <div class="border-2 border-red-700 rounded-md px-3 py-1 mb-2">
                 <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
@@ -132,36 +134,66 @@
         <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10">Fried Chicken</h1>
         <div class="swiper-wrapper flex flex-row gap-6">
           <div class="swiper-slide ml-6">
-            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-10 bg-gray-300 dark:bg-gray-600 rounded-md">
-              <img src="../assett/img/Fried Chicken.png" alt="" class="w-[150px] hover:scale-[2]">
-              <a href="../Web Random/Fried Chicken1.html"
-                class="font-semibold text-lg hover:text-red-600 dark:text-white">Original Fried Chicken</a>
+            <div
+              class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-4 bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+              <img src="../assett/img/Fried Chicken.png" alt="" class="w-[150px]">
+              <p
+                class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mt-4 text-center">
+                8K</p>
             </div>
+            <a href="../Web Random/Fried Chicken1.html"
+              class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex md:justify-center md:items-center md:ml-0 ml-12">Original
+              Fried Chicken</a>
           </div>
           <div class="swiper-slide">
-            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-10 bg-gray-300 dark:bg-gray-600 rounded-md">
-              <img src="../assett/img/Winger BBQ 1.png" alt="" class="w-[150px] hover:scale-[2]">
-              <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Winger BBQ</a>
+            <div
+              class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-4 bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+              <img src="../assett/img/Winger BBQ 1.png" alt="" class="w-[150px]">
+
+              <p
+                class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mt-4 text-center">
+                6K</p>
             </div>
+            <a href=""
+              class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-16">Winger
+              BBQ</a>
+          </div>
+          <div class="swiper-slide flex flex-col justify-center items-center">
+            <div
+              class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-6 bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+              <img src="../assett/img/Spicy Fried Chicken.png" alt="" class="w-[150px]">
+              <p
+                class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mt-4 text-center">
+                8K</p>
+            </div>
+            <a href=""
+              class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-12">Spicy
+              Fried Chicken</a>
+          </div>
+          <div class="swiper-slide flex flex-col justify-center items-center">
+            <div
+              class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-6 bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+              <img src="../assett/img/Ayam Geprek23.png" alt="" class="w-[150px]">
+              <p
+                class="absolute bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mt-40 text-center">
+                8K</p>
+            </div>
+            <a href=""
+              class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-16">Ayam
+              Geprek</a>
           </div>
           <div class="swiper-slide">
-            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-10 bg-gray-300 dark:bg-gray-600 rounded-md">
-              <img src="../assett/img/Spicy Fried Chicken.png" alt="" class="w-[150px] hover:scale-[2]">
-              <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Spicy Fried Chicken</a>
+            <div
+              class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-3 bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+              <img src="../assett/img/Cheese Winger.png" alt="" class="w-[150px]">
+
+              <p
+                class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mt-4 text-center">
+                8K</p>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-10 bg-gray-300 dark:bg-gray-600 rounded-md">
-              <img src="../assett/img/Ayam Geprek23.png" alt="" class="w-[150px] hover:scale-[2]">
-              <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Ayam Geprek</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] gap-10 bg-gray-300 dark:bg-gray-600 rounded-md">
-              <img src="../assett/img/Ayam_Geprek2-removebg-preview.png" alt=""
-                class="w-[150px] hover:scale-[2]">
-              <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Geprek Chicken</a>
-            </div>
+            <a href=""
+              class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-16">Cheese
+              Winger</a>
           </div>
 
         </div>
@@ -169,79 +201,151 @@
       </div>
     </section>
 
+    <div class="bg-gray-200 w-full dark:bg-blue-950">
+      <p class="text-gray-200 dark:text-blue-950">H</p>
 
-    <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 bg-gray-200 dark:bg-Dark">
+    </div>
+
+
+    <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 dark:bg-Dark">
       <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10 mt-10">Drink</h1>
       <div class="swiper-wrapper flex flex-row gap-6">
         <div class="swiper-slide ml-6">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Milo.png" alt="" class="w-[250px] hover:scale-[2]">
-           <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white text-center">Milo</a> 
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Milo.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
-          
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-24">Milo</a>
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Sprite.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Sprite</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Sprite.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-24">Sprite</a>
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Fanta.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fanta</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Fanta.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
+
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-24">Fanta</a>
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Fruit Tea.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Fruit tea</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Fruit Tea.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-20">Fruit
+            tea</a>
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600">
-            <img src="../assett/img/Air mIneral.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Air Mineral</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600">
+            <img src="../assett/img/Air mIneral.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-4 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-20">Air
+            Mineral</a>
         </div>
 
       </div>
     </div>
     </div>
     </section>
+
+    <div class="bg-gray-200 w-full dark:bg-blue-950">
+      <p class="text-gray-200 dark:text-blue-950">H</p>
+
+    </div>
 
     <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6">
       <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10 mt-10">Dessert</h1>
       <div class="swiper-wrapper flex flex-row gap-6">
         <div class="swiper-slide ml-6">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Es Krim Sundae Coklat.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Sundae Ice Cream</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Es Krim Sundae Coklat.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-2 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-12 mt-4">Sundae
+            Ice Cream</a>
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Strawberry Pudding.png" alt="" class="w-[150px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Strawberry Pudding</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Strawberry Pudding.png" alt="" class="w-[150px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-2 md:mr-56 text-xl font-semibold rounded-md mb-8 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-12 mt-4">Strawberry
+            Pudding</a>
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Muffin.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Vanilla Muffin</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Muffin.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-2 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-12 mt-4">Vanilla
+            Muffin</a>
         </div>
+
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Butter Croissaint.png" alt="" class="w-[250px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Crossaint</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Butter Croissaint.png" alt="" class="w-[250px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 mr-2 md:mr-56 text-xl font-semibold rounded-md mb-4 text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-20 mt-4">Crossaint</a>
+
         </div>
+
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png" alt="" class="w-[150px] hover:scale-[2]">
-            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white"></a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Choco Donut.png" alt="" class="w-[300px]">
+            <p
+              class="bg-[#C70039] text-white py-3 px-8 ml-2 mt-8 md:mt-0 md:mr-56 text-xl font-semibold rounded-md text-center">
+              8K</p>
           </div>
+          <a href=""
+            class="font-semibold text-lg hover:text-red-600 dark:text-white md:flex text-center md:justify-center md:items-center md:ml-0 ml-10 mt-4">Double
+            Choco Donut</a>
         </div>
 
       </div>
@@ -249,42 +353,51 @@
     </div>
     </section>
 
+    <div class="bg-gray-200 dark:bg-blue-950 w-full">
+      <p class="text-gray-200 dark:text-blue-950">H</p>
 
-    <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 bg-gray-200 dark:bg-Dark">
+    </div>
+
+    <div class="swiper mySwiper w-full h-[500px] flex flex-col gap-6 dark:bg-Dark">
       <h1 class="dark:text-white text-3xl font-semibold mb-10 ml-10 mt-10">Meal</h1>
       <div class="swiper-wrapper flex flex-row gap-6">
         <div class="swiper-slide ml-6">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Spicy French Fries.png" alt="" class="w-[150px] hover:scale-[2]">
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Spicy French Fries.png" alt="" class="w-[150px]">
             <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Spicy French Fries</a>
           </div>
-          
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/French Fries.png" alt="" class="w-[150px] hover:scale-[2]">
-<a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">French Fries</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/French Fries.png" alt="" class="w-[150px]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">French Fries</a>
           </div>
-          
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Nugget.png" alt="" class="w-[250px] hover:scale-[2]">
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Nugget.png" alt="" class="w-[250px]">
             <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Nugget</a>
           </div>
-          
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Cheese Stick.png" alt="" class="w-[250px] hover:scale-[2]">
-<a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Chesse Stick</a>
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Cheese Stick.png" alt="" class="w-[250px]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Chesse Stick</a>
           </div>
-                      
+
         </div>
         <div class="swiper-slide">
-          <div class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-gray-300 dark:bg-gray-600 rounded-md">
-            <img src="../assett/img/Chicken Bites.png" alt="" class="w-[150px] hover:scale-[2]">
-          <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Chicken Bites</a>  
+          <div
+            class="flex flex-col justify-center items-center w-[250px] md:w-[350px] h-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md">
+            <img src="../assett/img/Chicken Bites.png" alt="" class="w-[150px]">
+            <a href="" class="font-semibold text-lg hover:text-red-600 dark:text-white">Chicken Bites</a>
           </div>
 
         </div>

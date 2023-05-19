@@ -7,7 +7,7 @@ module.exports = {
     textColor :
       {"Red" : "#C70039"},
       backgroundColor :
-      {"Dark" : "#1E1E1E"},
+      {"Dark" : "#282B3D"},
     },
   },
   plugins: [],
