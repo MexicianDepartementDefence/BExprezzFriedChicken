@@ -19,7 +19,7 @@
 
                     <li><a href="../Web Random/Beranda.html" class="text-red-600">Home</a></li>
 
-                    <li><a href="../Web Random/Menu.html" class="text-red-600">Our <Menu></Menu></a></li>
+                    <li><a href="../Web Random/Menu.html" class="text-red-600">Our Menu</a></li>
                     
                     <li><button class="relative text-red-600 focus:outline-none group">
                         <a href="../Web Random/Menu.html">Delivery</a>
@@ -64,10 +64,11 @@
             </div>
         </div>
         </div>
+    </div>
 
     </header>
 
-    </div>
+    
 
     <!-- Modal Login -->
 
@@ -137,10 +138,51 @@
         </div>
 
     </section>
+<!-- Promo -->
+<section class="h-screen bg-[#FFF6F0] dark:bg-Dark">
+    <div class="flex flex-col items-center justify-center mt-28 gap-8">
+        <h1 class="text-5xl font-bold dark:text-white">
+            Promo Exprezz
+        </h1>
+        <div class="w-[900px]">
+            <a href=""><img src="../assett/img/Combo Exprezz Baru.png" alt=""></a>
+           
+        </div>
+        <a href="" class="text-[#C70039] text-lg font-bold md:ml-[800px]">See Promo</a>
+    </div>
 
-    <!-- Gambar Promo -->
+
+
+ 
+</section>
     
+<div class="bg-gray-200 w-full dark:bg-blue-950">
+    <p class="text-gray-200 dark:text-blue-950">H</p>
 
+  </div>
+
+  <section class="flex flex-col justify-center items-center mt-10 gap-8 mb-10">
+     <div class="w-[900px]">
+    <a href=""><img src="../assett/img/Party Exprezz.png" alt=""></a>
+   
+</div>
+<a href="" class="text-[#C70039] text-lg font-bold md:ml-[800px]">See Promo</a>
+  </section>
+
+
+  <div class="bg-gray-200 w-full dark:bg-blue-950">
+    <p class="text-gray-200 dark:text-blue-950">H</p>
+
+  </div>
+
+  <section class="flex flex-col justify-center items-center mt-10 gap-8">
+    <div class="w-[900px]">
+   <a href=""><img src="../assett/img/Hemat Exprezz.png" alt=""></a>
+  
+</div>
+<a href="" class="text-[#C70039] text-lg font-bold md:ml-[800px]">See Promo</a>
+ </section>
+  
     <footer class="bg-red-600 flex flex-row justify-around items-center p-8 mt-28">
         <div class="w-[200px]"><img src="../assett/img/Logo Footer.png" alt=""></div>
         <div class="flex flex-col gap-6">
@@ -157,5 +199,40 @@
     </footer>
     
 </body>
-<script src="../assett/Javascript/Ayam.js"></script>
+<script>
+    // DarkMode Toggle
+    const darktoggle = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+
+darktoggle.addEventListener("click", function(){
+    if(darktoggle.checked){
+html.classList.add("dark");
+    }
+    else {
+        html.classList.remove("dark");
+    }
+})
+
+// Ganti Gambar
+const Gambar = document.getElementById("Gambar");
+function GantiGambar(){   
+      Gambar.src = "../assett/img/Logo Dark Mode.png";
+}
+
+// Nav Scroll
+window.onscroll = function () { menu() };
+
+
+function menu() {
+    if (document.documentElement.scrollTop > 20) {
+        document.getElementById("header").classList.add("bg-white");
+        document.getElementById("header").classList.add("shadow-lg")
+    }
+
+    else {
+        document.getElementById("header").classList.remove("bg-white");
+        document.getElementById("header").classList.remove("shadow-lg")
+    }
+}
+</script>
 </html>
