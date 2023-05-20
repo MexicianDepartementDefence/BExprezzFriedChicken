@@ -8,6 +8,8 @@ module.exports = {
       {"Red" : "#C70039"},
       backgroundColor :
       {"Dark" : "#282B3D"},
+      backgroundImage :
+      {"BFC" : "url('../assett/img/Menu.png')"}
     },
   },
   plugins: [],
