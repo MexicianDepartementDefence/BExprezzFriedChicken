@@ -14,13 +14,13 @@
   </style>
 </head>
 <body>
-  <div class="max-w-md mx-auto mt-4 p-6 border border-gray-300 rounded-md">
-    <h1 class="text-2xl font-medium mb-4">Registration Form</h1>
-    <form id="registrationForm">
-      <div class="mb-4">
-        <label for="name" class="block text-gray-700 font-medium">Name</label>
-        <input type="text" id="name" name="name" class="border border-gray-400 rounded-md px-4 py-2 w-full">
-      </div>
+  <div class="w-[50px] md:w-[85px] flex justify-center items-center">
+    <img src="../assett/img/B Exprezz Chicken Logo.png" alt="">
+  </div>
+
+  <div class="max-w-md mx-auto mt-4 p-6">
+    <h1 class="text-2xl font-medium mb-4 text-center">Silahkan Isi Registrasi Berikut</h1>
+    <form action="" method="post" id="registrationForm">
       <div class="mb-4">
         <label for="email" class="block text-gray-700 font-medium">Email</label>
         <input type="email" id="email" name="email" class="border border-gray-400 rounded-md px-4 py-2 w-full">
@@ -33,25 +33,45 @@
         <label for="confirmPassword" class="block text-gray-700 font-medium">Confirm Password</label>
         <input type="password" id="confirmPassword" name="confirmPassword" class="border border-gray-400 rounded-md px-4 py-2 w-full">
       </div>
-      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Register</button>
-      <p id="successMessage" class="hidden mt-2 text-green-500">Registration successful!</p>
+      <div class="mb-4">
+        <label for="NoTelepon" class="block text-gray-700 font-medium">Nomor Telepon</label>
+        <input type="number" id="NoTelepon" name="NoTelepon" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+      </div>
+      <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-medium py-4 px-4 rounded-md w-full md:w-[700px] text-center">Register</button>
+      <p id="errormessage" class="text-red-700 font-bold" hidden></p>
     </form>
   </div>
 
-  <script>
-    const registrationForm = document.getElementById('registrationForm');
-    const successMessage = document.getElementById('successMessage');
-
-    registrationForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      // Simulate registration process (you can replace this with your actual registration logic)
-      setTimeout(() => {
-        registrationForm.reset();
-        successMessage.classList.remove('hidden');
-      }, 1000);
-    });
-  </script>
 </body>
+<script>
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const Konfirmasi = document.getElementById("confirmPassword");
+  const NoTelepon = document.getElementById("NoTelepon");
+  const errormessage = document.getElementById("errormessage");
+  const form = document.getElementById("registrationForm");
 
+  form.addEventListener("submit", (e) => {
+    const errors = [];
+    if (email.value.trim() === ""){
+      errors.push("Anda Harus Mengisi Email Anda")
+    }
+    if (password.value.trim() === ""){
+      errors.push("Anda Harus Mengisi Password Anda")
+    }
+    if (Konfirmasi.value.trim() === ""){
+      errors.push("Anda Harus Mengkonfirmasi Password Anda")
+    }
+
+    if(NoTelepon.value.trim() === ""){
+      errors.push("Anda Harus Mengisi No Telepon Anda")
+    }
+
+    if(errors.length > 0){
+      e.preventDefault();
+      errormessage.toggleAttribute("hidden");
+      errormessage.innerHTML = errors.join(" ,")
+    }
+  })
+</script>
 </html>
