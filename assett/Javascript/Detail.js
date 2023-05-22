@@ -1,3 +1,29 @@
+// Validation Pembayaran
+const Lokasi = document.getElementById("Lokasi");
+const Pilih1 = document.getElementById("checkbox1");
+const Pilih2 = document.getElementById("checkbox2");
+const Mulih = document.querySelector("form");
+const Pesan = document.getElementById("PesanError");
+Mulih.addEventListener("submit", (e) => {
+    const errors = [];
+    if (Lokasi.value.trim() === ""){
+errors.push("Silahkan Isi Lokasi Anda Terlebih Dahulu")
+    }
+
+    if(Pilih1.value.trim() === ""){
+errors.push("Silahkan Pilih Alat Pembayaran Anda")
+    }
+
+    if(Pilih2.value.trim() === ""){
+        errors.push("Silahkan Pilih Alat Pembayaran Anda")   
+    }
+    if (errors.length > 0) {
+        e.preventDefault();
+        Pesan.toggleAttribute("hidden");
+        Pesan.innerHTML = errors.join(" ,")
+    }
+})
+
 // Darkmode Toggle
 
 const darktoggle = document.querySelector("#dark-toggle");
@@ -12,25 +38,6 @@ html.classList.add("dark");
     }
 })
 
-// Validation Pembayaran
-const Lokasi = document.getElementById("Lokasi");
-const Pilih = document.getElementById("Pilih");
-const Mulih = document.querySelector("form");
-const Pesan = document.getElementById("PesanError");
-Mulih.addEventListener("submit", (j) => {
-const elol = [];
-if (Lokasi.value.trim() === ""){
-    elol.push("Isilah Alamat Lokasi Dan Pilih Jasa Pembayaran Anda")
-}
-
-if (Pilih.value.trim() === ""){
-    elol.push("Isilah Alamat Lokasi Dan Pilih Jasa Pembayaran Anda")
-}
-if(elol.length > 0){
-    j.preventDefault();
-    Pesan.toggleAttribute("hidden");
-}
-})
 
 
 // Modal Login
@@ -76,6 +83,10 @@ if (password.value.length < 4){
 
 if (password.value.trim() === ""){
  error.push("Password Anda Harus Diisi")
+}
+
+if (checkbox.value.trim() === ""){
+    error.push("Anda Harus Mencentang Checkbox ini")
 }
 
 if(error.length > 0) {
