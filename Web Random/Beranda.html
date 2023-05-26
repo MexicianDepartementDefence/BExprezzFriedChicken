@@ -8,6 +8,10 @@
     <title>B Exprezz Fried Chicken</title>
     <link rel="stylesheet" href="../assett/src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
 </head>
 
 <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
@@ -21,7 +25,7 @@
 
                     <li><a href="../Web Random/Beranda.html" class="text-red-600">Home</a></li>
 
-                    <li><a href="../Web Random/Menu.html" class="text-red-600">Our <Menu></Menu></a></li>
+                    <li><a href="../Web Random/Menu.html" class="text-red-600">Our Menu</a></li>
                     
                     <li><button class="relative text-red-600 focus:outline-none group">
                         <a href="../Web Random/Menu.html">Delivery</a>
@@ -31,9 +35,7 @@
                     <li class="flex items-center">
                         <input type="checkbox" class="hidden" id="dark-toggle" onclick="GantiGambar()">
                         <label for="dark-toggle">
-                            <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                                <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
-                            </div>
+                                <div class="text-red-600 cursor-pointer"><i class="fa-solid fa-moon"></i></div>
                         </label>
                     <li>
                         <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2">
@@ -49,7 +51,7 @@
                 <div class="text-red-600 block md:hidden text-center dark:text-white" onclick="showHideMenu()"><i class="fa-solid fa-bars"></i></div>
             </nav>
 
-            <div class="hidden flex-col transition-all ease-in-out duration-200 md:hidden w-2/4 dark:bg-Dark bg-red-600 translate-x-80" id="daftarMenu">
+            <div class="hidden flex-col transition-all ease-in-out duration-200 md:hidden w-2/4 dark:bg-Dark bg-white translate-x-80" id="daftarMenu">
                 <a href="" class="text-red-600 dark:text-Yellow">Home</a>
                 <a href="" class="text-red-600 dark:text-Yellow">Our Menu</a>
                 <a href="" class="text-red-600 dark:text-Yellow">Login</a>
@@ -57,9 +59,7 @@
                     <span class="text-red-600 dark:text-Yellow"></span>
                     <input type="checkbox" class="hidden" id="dark-toggle">
                     <label for="dark-toggle">
-                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
-                        </div>
+                        <div class="text-red-600"><i class="fa-solid fa-moon"></i></div>
                     </label>
             </div>
         </div>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <!-- Modal Body -->
-                <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8" id="TampilLogin">
                     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                         <img class="mx-auto h-[150px] w-auto" src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png"
                             alt="Your Company">
@@ -141,59 +141,61 @@
     </section>
     <!-- Promo -->
         <!-- Slider -->
-        <section id="article" class="mt-44">
-            <div class="flex flex-row gap-6 justify-between items-center"> 
-                <a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:translate-x-44" onclick="moveSlide(-1)"><</a>
-                <div class="relative w-[460px] md:w-[1000px] mx-auto">
+        <section id="article" class="mt-20">
+             
+               
+                <div class="relative w-full md:w-full mx-auto">
                 <div class="slide relative">
-                    <img class="w-full h-[200px] md:h-[500px] object-cover"
+                    <img class="w-[800px] md:w-full h-[300px] md:h-[1000px] object-cover"
                         src="../assett/img/Banner 1-2.png">
                 </div>
 
                 <div class="slide relative">
-                    <img class="w-full h-[200px] md:h-[500px] object-cover" src="../assett/img/Combo Exprezzz Banner.png">
+                    <img class="w-[800px] h-[300px] md:w-full md:h-[1000px] object-cover" src="../assett/img/Banner Combo2.png">
                 </div>
 
                 <div class="slide relative">
-                    <img class="w-full h-[200px] md:h-[500px] object-cover" src="../assett/img/Party Exprezz.png">
+                    <img class="w-[800px] md:w-full h-[300px] md:h-[1000px] object-cover" src="../assett/img/Party Exprezz.png">
                 </div>
-
+<div class="flex flex-row gap-6 justify-between items-center"> 
+    <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative bottom-44 md:bottom-[450px] left-6" onclick="moveSlide(-1)"><</a>
+    <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative bottom-44 md:bottom-[450px] right-6" onclick="moveSlide(1)">></a>
             </div>
 
-<a class="rounded-full w-10 h-10 bg-red-600 text-white flex items-center justify-center cursor-pointer relative md:-translate-x-44" onclick="moveSlide(1)">></a>
+
             </div>
             <!-- Implement the carousel -->
             
             <br>
 
             <!-- The dots -->
-            <div class="flex justify-center items-center space-x-5 md:space-x-5">
+            <div class="flex justify-center items-center space-x-5 md:space-x-5 mb-6">
                 <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
                 <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
                 <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
             </div>
 
-            <a href="../Web Random/Promo.html" class="text-red-600 dark:text-Yellow font-bold text-xl ml-[1125px]">See All Promo</a>
+            <a href="../Web Random/Promo.html" class="text-red-600 dark:text-Yellow font-bold text-lg md:text-xl ml-80 mt-10 md:mt-4 md:ml-[1350px]">See All Promo</a>
             </div>
         </section>
 
 <!-- Menu -->
         <section>
-<div class="flex flex-col mt-10 justify-center items-center gap-8">
+<div class="flex flex-col mt-20 justify-center items-center gap-8 mb-20">
     <h1 class="text-3xl font-bold text-red-600 dark:text-Yellow">Our Menu</h1>
 <div class="flex flex-col md:flex-row gap-5">
-    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600 dark:border-0 dark:bg-[#69718E]">
+    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
 <img src="../assett/img/Fried Chicken.png" alt="" class="w-[150px]">
 <h3 class="font-semibold text-lg dark:text-white">Fried Chicken</h3>
     </div>
 
 
-    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600 dark:border-0 dark:bg-[#69718E]">
+    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
         <img src="../assett/img/Desert.png" alt="" class="w-[150px]">
         <h3 class="font-semibold text-lg dark:text-white">Dessert</h3>
             </div>
 
-            <div class="flex flex-col justify-center gap-6 items-center w-[350px] h-[250px] bg-slate-200 rounded-md border-2 border-red-600 dark:border-0 dark:bg-[#69718E]">
+            <div class="flex flex-col justify-center gap-6 items-center w-[350px] h-[250px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
                 <img src="../assett/img/Drink.png" alt="" class="w-[150px]">
                 <h3 class="font-semibold text-lg dark:text-white">Drink</h3>
                     </div>
@@ -203,8 +205,12 @@
 </div>
         </section>
 
+        <div class="bg-gray-200 dark:bg-blue-950 w-full h-4">
+
+        </div>
+
 <section>
-    <div class="flex flex-col justify-center items-center mt-10 gap-10">
+    <div class="flex flex-col justify-center items-center mt-20 gap-10 mb-20">
         <p class="text-red-600 text-xl font-extrabold">WHAT WE SERVE</p>
         <h1 class="text-5xl font-bold dark:text-white text-center">Your Favorite Food Delivery Partner</h1>
         <div class="flex flex-col md:flex-row gap-12">
@@ -236,10 +242,61 @@
             
 </section>
 
+<div class="bg-gray-200 dark:bg-blue-950 w-full h-4">
 
-        <footer class="bg-[#C70039] flex flex-row justify-around items-center mt-10">
+</div>
+
+<!-- Testimoni -->
+
+<section class="mt-20 mb-20">
+    <h1 class="text-center text-5xl font-bold dark:text-white">Here Are Some Comments About Us</h1>
+    <!-- Slider main container -->
+<div class="swiper h-screen w-full mt-10">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+    <div class="flex flex-col justify-center items-center gap-4 mt-10">
+        <div class="w-24 border-2 rounded-full border-red-300">
+<img src="../assett/img/Air mIneral.png" alt="">
+
+        </div>
+<h1 class="text-3xl font-bold dark:text-white">Penyuka Air Putih</h1>
+        <div class="flex flex-row gap-6">
+            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
+            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
+            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
+            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
+            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
+        </div>
+<div class="bg-black dark:bg-dark w-[300px] rounded-md h-[100px] p-6">
+<p class="text-white text-lg text-center font-semibold">Makanan Enak, Ayam Berasa Crispy, Gurih, Enak Bangetlah</p>
+</div>
+
+
+      </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center">
+
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col justify-center items-center">
+
+        </div>
+      </div>
+      ...
+    </div>
+  
+    <!-- If we need navigation buttons -->
+  </div>
+</section>
+
+
+        <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center mt-10 px-40 gap-6 md:gap-0">
             <div class="w-[250px]"><img src="../assett/img/Logo Footer.png" alt=""></div>
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 p-6 border-white border-l-0 md:border-l-8 border-t-8 md:border-t-0">
                 <div class="flex flex-row gap-5">
                     <a href="" class="text-white text-5xl"><i class="fa-brands fa-instagram"></i></a>
                     <a href="" class="text-white text-5xl"><i class="fa-brands fa-facebook"></i></a>
@@ -254,6 +311,7 @@
 
         </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="../assett/Javascript/Ayam.js"></script>
 
 </html>
