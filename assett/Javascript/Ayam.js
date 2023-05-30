@@ -1,6 +1,7 @@
 // Darkmode Toggle
 const darktoggle = document.querySelector("#dark-toggle");
 const html = document.querySelector("html");
+const Matahari = document.getElementById("Matahari")
 
 darktoggle.addEventListener("click", function(){
     if(darktoggle.checked){
@@ -10,12 +11,6 @@ html.classList.add("dark");
         html.classList.remove("dark");
     }
 })
-
-// Ganti Gambar
-const Gambar = document.getElementById("Gambar");
-function GantiGambar(){   
-      Gambar.src = "../assett/img/Logo Dark Mode.png";
-}
 
 // Login Modal
 
@@ -141,23 +136,3 @@ if(error.length > 0) {
 }
 })
 
-// Swiper JS
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });

@@ -18,14 +18,14 @@
     <header class="fixed z-20 top-0 w-full md:w-full" id="header">
         <div class="bg-[#FFF6F0] dark:bg-Dark">
             <nav class="w-full flex flex-row justify-between items-center py-2 px-5">
-                <div class="w-[100px] ml-10"><img src="../assett/img/B Exprezz Chicken Logo.png" alt="" id="Gambar">
-                </div>
+                <a href="../Web Random/Beranda.html" class="w-[100px] ml-10"><img src="../assett/img/Logo Navbar.png" alt="">
+                </a>
 
                 <ul class="md:flex flex-row gap-5 items-center hidden">
 
                     <li><a href="../Web Random/Beranda.html" class="text-red-600">Home</a></li>
 
-                    <li><a href="../Web Random/Menu.html" class="text-red-600">Our Menu</a></li>
+                    <li><a href="../Web Random/Menu.html" class="text-red-600">Menu</a></li>
                     
                     <li><button class="relative text-red-600 focus:outline-none group">
                         <a href="../Web Random/Menu.html">Delivery</a>
@@ -33,7 +33,7 @@
                     
                     
                     <li class="flex items-center">
-                        <input type="checkbox" class="hidden" id="dark-toggle" onclick="GantiGambar()">
+                        <input type="checkbox" class="hidden" id="dark-toggle">
                         <label for="dark-toggle">
                                 <div class="text-red-600 cursor-pointer"><i class="fa-solid fa-moon"></i></div>
                         </label>
@@ -59,7 +59,8 @@
                     <span class="text-red-600 dark:text-Yellow"></span>
                     <input type="checkbox" class="hidden" id="dark-toggle">
                     <label for="dark-toggle">
-                        <div class="text-red-600"><i class="fa-solid fa-moon"></i></div>
+                        <div class="text-red-600"><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
+                        
                     </label>
             </div>
         </div>
@@ -141,41 +142,29 @@
     </section>
     <!-- Promo -->
         <!-- Slider -->
-        <section id="article" class="mt-20">
+        <section id="article" class="mt-[110px] md:mt-20">
              
                
                 <div class="relative w-full md:w-full mx-auto">
                 <div class="slide relative">
-                    <img class="w-[800px] md:w-full h-[300px] md:h-[1000px] object-cover"
-                        src="../assett/img/Banner 1-2.png">
+                    <img class="w-[700px] md:w-full md:h-[650px] object-cover"
+                        src="../assett/img/Banner21.png">
                 </div>
 
                 <div class="slide relative">
-                    <img class="w-[800px] h-[300px] md:w-full md:h-[1000px] object-cover" src="../assett/img/Banner Combo2.png">
+                    <img class="w-[800px] md:h-[650px] md:w-full object-cover" src="../assett/img/Banner22.png">
                 </div>
 
                 <div class="slide relative">
-                    <img class="w-[800px] md:w-full h-[300px] md:h-[1000px] object-cover" src="../assett/img/Party Exprezz.png">
+                    <img class="w-[800px] md:w-full md:h-[650px] object-cover" src="../assett/img/Banner23.png">
                 </div>
 <div class="flex flex-row gap-6 justify-between items-center"> 
-    <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative bottom-44 md:bottom-[450px] left-6" onclick="moveSlide(-1)"><</a>
-    <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative bottom-44 md:bottom-[450px] right-6" onclick="moveSlide(1)">></a>
+    <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative left-6 bottom-28 md:bottom-[350px]" onclick="moveSlide(-1)"><</a>
+    <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative right-6 bottom-28 md:bottom-[350px]" onclick="moveSlide(1)">></a>
             </div>
 
 
             </div>
-            <!-- Implement the carousel -->
-            
-            <br>
-
-            <!-- The dots -->
-            <div class="flex justify-center items-center space-x-5 md:space-x-5 mb-6">
-                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
-                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
-                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
-            </div>
-
-            <a href="../Web Random/Promo.html" class="text-red-600 dark:text-Yellow font-bold text-lg md:text-xl ml-80 mt-10 md:mt-4 md:ml-[1350px]">See All Promo</a>
             </div>
         </section>
 
@@ -248,53 +237,163 @@
 
 <!-- Testimoni -->
 
-<section class="mt-20 mb-20">
+<section class="mt-20 mb-20 p-8">
+    
     <h1 class="text-center text-5xl font-bold dark:text-white">Here Are Some Comments About Us</h1>
-    <!-- Slider main container -->
-<div class="swiper h-screen w-full mt-10">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
+    
+    <!-- Swiper -->
+  <div class="swiper mySwiper w-full h-[400px] mt-10 mb-10">
+    <div class="swiper-wrapper w-full mx-0 md:mx-4 gap-10">
       <div class="swiper-slide">
-    <div class="flex flex-col justify-center items-center gap-4 mt-10">
-        <div class="w-24 border-2 rounded-full border-red-300">
-<img src="../assett/img/Air mIneral.png" alt="">
+        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-5 p-8">
+            <div class="flex justify-center">
+                <img src="../assett/img/revardi-syahputra-200.png" alt="" class="w-20 border-[3px] border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-lg font-bold">Revardi Syahpurta</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
+
+            </div>
+            <p class="text-lg font-medium italic text-center">"Makanannya Enak, Desertnya Enak, Tempatnya Nyaman Rekomended Dah Asli"</p>
         </div>
-<h1 class="text-3xl font-bold dark:text-white">Penyuka Air Putih</h1>
-        <div class="flex flex-row gap-6">
-            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
-            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
-            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
-            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
-            <div class="text-yellow-500 text-3xl"><i class="fa-solid fa-star"></i></div>
-        </div>
-<div class="bg-black dark:bg-dark w-[300px] rounded-md h-[100px] p-6">
-<p class="text-white text-lg text-center font-semibold">Makanan Enak, Ayam Berasa Crispy, Gurih, Enak Bangetlah</p>
-</div>
-
-
-      </div>
       </div>
       <div class="swiper-slide">
-        <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-5 p-8">
+            <div class="flex justify-center">
+                <img src="../assett/img/img4.png" alt="" class="w-20">
+            </div>
+            <h1 class="text-center text-lg font-bold">Putri Intan</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
+
+            </div>
+            <p class="text-lg font-medium italic text-center">"Chicken Winger BBQ nya bikin ketagihan sih,
+                harus wajib coba chicken winger BBQnya klo 
+                kesini 👍👍"</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-6 p-10">
+            <div class="flex justify-center">
+                <img src="../assett/img/annas-ahmad-200.png" alt="" class="w-20 border-[3px] border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-lg font-bold">Annas Ahmad</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
 
+
+            </div>
+            <p class="text-lg font-medium italic text-center">"Bikin Ketagihan Buat Makan, Tempat Nyaman, Ada Wifi Komplit Dah"</p>
         </div>
       </div>
-      ...
+      <div class="swiper-slide">
+        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-6 p-10">
+            <div class="flex justify-center">
+                <img src="../assett/img/img3.png" alt="" class="w-20">
+            </div>
+            <h1 class="text-center text-lg font-bold">Ellena</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+
+            </div>
+            <p class="text-lg font-medium italic text-center">"Suka banget sama ice cream sundae nya, 
+                enak banget👍💖"</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-6 p-10">
+            <div class="flex justify-center">
+                <img src="../assett/img/img1.jpeg" alt="" class="w-20 border-4 border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-lg font-bold">Mas Kumalala</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+
+            </div>
+            <p class="text-lg font-medium italic text-center">"Ayamnya Enak, Juicy, Lembut Dagingnya, Murah Lagi"</p>
+        </div>
+      </div>
     </div>
-  
-    <!-- If we need navigation buttons -->
   </div>
-</section>
+   </section>
+        
 
 
-        <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center mt-10 px-40 gap-6 md:gap-0">
+        <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center px-40 gap-6 md:gap-0">
             <div class="w-[250px]"><img src="../assett/img/Logo Footer.png" alt=""></div>
             <div class="flex flex-col gap-6 p-6 border-white border-l-0 md:border-l-8 border-t-8 md:border-t-0">
                 <div class="flex flex-row gap-5">
@@ -305,13 +404,38 @@
                 <div class="text-sm md:text-lg text-white">
                     <p>Jl. Raya Cibarusah, Kabupaten Bekasi</p>
                 </div>
-                
-                
-            </div>
 
         </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="../assett/Javascript/Ayam.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
 
 </html>

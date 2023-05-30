@@ -1,8 +1,19 @@
-// Ganti Gambar
-const Gambar = document.getElementById("Gambar");
-function GantiGambar(){   
-      Gambar.src = "../assett/img/Logo Dark Mode.png";
-}
+// Filter
+const AyamGoreng = document.getElementById("AyamGoreng");
+const Meenum = document.getElementById("Meenum");
+const Dessert = document.getElementById("Desert");
+const Meal = document.getElementById("Cemilan");
+const SwipeAyam = document.getElementById("SwipeAyam");
+const SwipeMinum = document.getElementById("SwipeMinum");
+const SwipeDessert = document.getElementById("SwipeDessert");
+const SwipeMeal = document.getElementById("SwipeNgemil");
+
+AyamGoreng.addEventListener("click", function(){
+    SwipeDessert.classList.remove("h-[500px]");
+    SwipeDessert.classList.add("h-0");
+    SwipeMinum.classList.remove("h-[500px]");
+    SwipeMinum.classList.add("h-0");
+})
 
 // Nav Scroll
 window.onscroll = function () { menu() };
