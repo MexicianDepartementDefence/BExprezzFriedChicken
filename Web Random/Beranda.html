@@ -12,6 +12,13 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
+<script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+</script>
 </head>
 
 <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
@@ -34,11 +41,11 @@
                     
                     <li class="flex items-center">
                         <input type="checkbox" class="hidden" id="dark-toggle">
-                        <label for="dark-toggle">
-                                <div class="text-red-600 cursor-pointer"><i class="fa-solid fa-moon"></i></div>
+                        <label for="dark-toggle" >
+                                <div class="text-red-600 cursor-pointer" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
                         </label>
                     <li>
-                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mb-2">
+                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mt-1">
                             <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
                         </div>
 
@@ -48,10 +55,10 @@
 
 
                 </ul>
-                <div class="text-red-600 block md:hidden text-center dark:text-white" onclick="showHideMenu()"><i class="fa-solid fa-bars"></i></div>
+                <div class="text-red-600 block md:hidden text-center dark:text-white transition-all duration-1000 ease-in-out" onclick="showHideMenu()"><i class="fa-solid fa-bars"></i></div>
             </nav>
 
-            <div class="hidden flex-col transition-all ease-in-out duration-200 md:hidden w-2/4 dark:bg-Dark bg-white translate-x-80" id="daftarMenu">
+            <div class="hidden flex-col transition-all ease-in-out duration-1000 md:hidden w-2/4 dark:bg-Dark bg-white translate-x-80" id="daftarMenu">
                 <a href="" class="text-red-600 dark:text-Yellow">Home</a>
                 <a href="" class="text-red-600 dark:text-Yellow">Our Menu</a>
                 <a href="" class="text-red-600 dark:text-Yellow">Login</a>
@@ -170,24 +177,34 @@
 
 <!-- Menu -->
         <section>
-<div class="flex flex-col mt-20 justify-center items-center gap-8 mb-20">
+<div class="flex flex-col mt-20 justify-center items-center gap-20 mb-20">
     <h1 class="text-3xl font-bold text-red-600 dark:text-Yellow">Our Menu</h1>
-<div class="flex flex-col md:flex-row gap-5">
-    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
-<img src="../assett/img/Fried Chicken.png" alt="" class="w-[150px]">
-<h3 class="font-semibold text-lg dark:text-white">Fried Chicken</h3>
+<div class="flex flex-col md:flex-row gap-20">
+    <div class="flex flex-col items-center gap-4">
+       <div class="flex justify-center items-center w-[350px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+<img src="../assett/img/Fried Chicken.png" alt="" class="w-[250px]">
+
+    </div> 
+    <h3 class="font-semibold text-lg dark:text-white">Fried Chicken</h3>
     </div>
+    
 
-
-    <div class="flex flex-col gap-6 justify-center items-center w-[350px] h-[250px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
-        <img src="../assett/img/Desert.png" alt="" class="w-[150px]">
-        <h3 class="font-semibold text-lg dark:text-white">Dessert</h3>
+<div class="flex flex-col items-center gap-4">
+     <div class="flex justify-center items-center w-[350px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+        <img src="../assett/img/Desert.png" alt="" class="w-[250px]">
+        
             </div>
-
-            <div class="flex flex-col justify-center gap-6 items-center w-[350px] h-[250px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
-                <img src="../assett/img/Drink.png" alt="" class="w-[150px]">
-                <h3 class="font-semibold text-lg dark:text-white">Drink</h3>
+         <h3 class="font-semibold text-lg dark:text-white">Dessert</h3>   
+</div>
+   
+<div class="flex flex-col gap-4 items-center">
+    <div class="flex justify-center items-center w-[350px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+                <img src="../assett/img/Drink.png" alt="" class="w-[250px]">
+                
                     </div>
+                    <h3 class="font-semibold text-lg dark:text-white">Drink</h3>
+</div>
+            
 </div>
 
 <button class="bg-red-600 text-white py-3 px-6 rounded-full font-semibold"><a href="../Web Random/Menu.html">See More ></a></button>
@@ -203,14 +220,14 @@
         <p class="text-red-600 text-xl font-extrabold">WHAT WE SERVE</p>
         <h1 class="text-5xl font-bold dark:text-white text-center">Your Favorite Food Delivery Partner</h1>
         <div class="flex flex-col md:flex-row gap-12">
-            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-10 dark:bg-slate-600">
+            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-16 dark:bg-slate-600">
                  <img src="../assett/img/Handphone.png" alt="" class="w-[100px]">
                 <h3 class="font-bold text-xl dark:text-white">Easy To Order</h3>   
                 <p class="font-medium text-sm text-center dark:text-white">You only need a few steps in ordering food.</p>
                 
 
             </div>
-            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-10 dark:bg-slate-600">
+            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-16 dark:bg-slate-600">
                  <img src="../assett/img/Ayam Gojek.png" alt="" class="w-[300px]">
                 <h3 class="font-bold text-xl dark:text-white">Fastest Delivery</h3>   
                 <p class="font-medium text-sm text-center dark:text-white">Delivery that is always ontime
@@ -219,7 +236,7 @@
 
             </div>
 
-            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-10 dark:bg-slate-600">
+            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-16 dark:bg-slate-600">
                 <img src="../assett/img/Ember Ayam.png" alt="" class="w-[200px]">
                 <h3 class="font-bold text-xl dark:text-white">Best Quality</h3>   
                 <p class="font-medium text-sm text-center dark:text-white">Not only fast for us quality is also

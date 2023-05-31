@@ -1,16 +1,32 @@
 // Darkmode Toggle
 const darktoggle = document.querySelector("#dark-toggle");
 const html = document.querySelector("html");
-const Matahari = document.getElementById("Matahari")
 
 darktoggle.addEventListener("click", function(){
     if(darktoggle.checked){
 html.classList.add("dark");
+localStorage.theme = "dark";
     }
     else {
         html.classList.remove("dark");
+        localStorage.theme = "light";
     }
-})
+});
+
+let changeIcon = function(icon){
+    if (darktoggle.checked){
+       icon.classList.add("fa-sun");
+    icon.classList.remove("fa-moon"); 
+    }
+
+    else{
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");  
+    }
+    
+}
+
+
 
 // Login Modal
 
@@ -134,5 +150,5 @@ if(error.length > 0) {
  errormessage.toggleAttribute("hidden");
  errormessage.innerHTML = error.join(", ");
 }
-})
+});
 
