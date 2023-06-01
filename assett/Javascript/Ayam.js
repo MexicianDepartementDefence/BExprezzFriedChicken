@@ -106,18 +106,9 @@ function showSlide(n) {
         slides[i].classList.add('hidden');
     }
 
-    // remove active status from all dots
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('bg-black');
-        dots[i].classList.add('bg-red-600');
-    }
 
     // show the active slide
     slides[slideIndex - 1].classList.remove('hidden');
-
-    // highlight the active dot
-    dots[slideIndex - 1].classList.remove('bg-red-600');
-    dots[slideIndex - 1].classList.add('bg-black');
 
 }
 
@@ -134,21 +125,15 @@ const errormessage = document.getElementById("errormessage");
 form.addEventListener("submit", (e) => {
  const error = [];
  if (email.value.trim() === ""){
- error.push("Alamat Email Anda Harus Diisi")
+ email.style.borderColor = "red"
 }
 
 if (password.value.length < 4){
- error.push("Password Anda Kurang Dari 4")
+ password.style.borderColor = "red"
 }
 
 if (password.value.trim() === ""){
- error.push("Password Anda Harus Diisi")
-}
-
-if(error.length > 0) {
- e.preventDefault();
- errormessage.toggleAttribute("hidden");
- errormessage.innerHTML = error.join(", ");
+    password.style.borderColor = "red"
 }
 });
 

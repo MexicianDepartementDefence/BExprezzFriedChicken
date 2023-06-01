@@ -55,20 +55,25 @@
 
 
                 </ul>
-                <div class="text-red-600 block md:hidden text-center dark:text-white transition-all duration-1000 ease-in-out" onclick="showHideMenu()"><i class="fa-solid fa-bars"></i></div>
-            </nav>
-
-            <div class="hidden flex-col transition-all ease-in-out duration-1000 md:hidden w-2/4 dark:bg-Dark bg-white translate-x-80" id="daftarMenu">
-                <a href="" class="text-red-600 dark:text-Yellow">Home</a>
-                <a href="" class="text-red-600 dark:text-Yellow">Our Menu</a>
-                <a href="" class="text-red-600 dark:text-Yellow">Login</a>
-                <a href="" class="flex flex-col">
-                    <span class="text-red-600 dark:text-Yellow"></span>
+                <div class="flex flex-row md:hidden gap-6">
                     <input type="checkbox" class="hidden" id="dark-toggle">
-                    <label for="dark-toggle">
-                        <div class="text-red-600"><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
-                        
-                    </label>
+                        <label for="dark-toggle">
+                                <div class="text-red-600 cursor-pointer transition-all duration-500 mt-1.5" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
+                        </label>
+                    <div class="border-2 border-red-600 rounded-md px-3 py-1">
+                        <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
+                    </div>
+
+                <div class="text-red-600 block md:hidden text-center transition-all duration-1000 ease-in-out cursor-pointer" onclick="showHideMenu()">
+                    <i class="fa-solid fa-bars"></i></div>
+            </nav>
+                </div>
+                
+
+            <div class="hidden flex-col transition-all ease-in-out duration-1000 md:hidden w-full dark:bg-Dark bg-[#FFF6F0] gap-6 p-6" id="daftarMenu">
+                <a href="../Web Random/Beranda.html" class="text-black dark:text-white border-b-2 border-black pb-2 dark:border-white">Home</a>
+                <a href="../Web Random/Menu.html" class="text-black dark:text-white border-b-2 border-black pb-2 dark:border-white">Menu</a>
+                <a href="../Web Random/Delivery.html" class="text-black dark:text-white border-b-2 border-black pb-2 dark:border-white">Delivery</a>
             </div>
         </div>
         </div>
@@ -90,7 +95,91 @@
                     </div>
                 </div>
                 <!-- Modal Body -->
-                <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8" id="TampilLogin">
+                <div class="hidden flex-col p-5 bg-[#FFF6F0]">
+                    <div class="mb-10 flex flex-col justify-center items-center gap-2">
+                        <img src="../assett/img/Logo Dark Mode.png" alt="" class="w-[200px]">
+                        <h1 class="text-3xl font-bold dark:text-white">Welcome Back</h1>
+                        <p class="text-sm text-gray-500">Tolong Masukkan Akun Anda</p>
+                    </div>
+<div class="flex flex-row justify-center items-center gap-3">
+    <button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
+        <img src="../assett/img/Google-removebg-preview.png" alt="" class="w-10">
+    </button>
+    <button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
+        <img src="../assett/img/Facebook.png" alt="" class="w-10">
+    </button>
+    <button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
+        <img src="../assett/img/Twitter-removebg-preview.png" alt="" class="w-10">
+    </button>
+</div>
+<div class="mt-10 text-center">
+<p class="text-sm text-gray-500">Atau</p>
+</div>
+
+<div class="flex flex-col gap-3 bg-[#FFF6F0]">
+    <form action="../Web Random/Beranda.html" method="GET">
+        <div class="flex flex-col justify-center items-center gap-2">
+            <label for="email" class="dark:text-white">Email Address</label>
+<input type="email" name="email" id="email" placeholder="Masukkan Alamat Email Dibawah" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-2 mt-2">
+            <label for="email" class="dark:text-white">Password</label>
+<input type="password" name="password" id="password" placeholder="****************" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
+            <div class="flex justify-center items-center">
+<button class="w-24 text-center bg-red-700 mt-5 py-2 text-white rounded-md" type="submit">Sign In</button>
+            </div>
+
+<p class="text-sm text-center font-medium dark:text-white flex gap-2 justify-center mt-3">Don't Have A Account<span class="font-medium text-red-700 cursor-pointer" onclick="Register()">Sign Up</span></p>
+
+    </form>
+</div>
+                </div>
+
+<!-- Modal Register -->
+<div class="flex flex-col gap-10" onclick="TutupRegister()">
+        <div class="text-red-600 hover:text-red-700 ml-4 md:ml-20 text-lg flex flex-row gap-3">
+            <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="#" class="text-red-600 hover:text-red-700">Back</a>
+        </div>
+<div class="p-5 flex flex-col mb-4">
+    <div class="flex flex-col justify-center items-center gap-3">
+        <img src="../assett/img/Logo Navbar.png" alt="" class="w-[200px]">
+        <h1 class="text-3xl font-bold dark:text-white">Welcome!</h1>
+        <p class="text-sm text-gray-500">Tolong Masukkan Data Diri Anda</p>
+    </div>
+    
+
+        <form action="" method="get" class="flex flex-col">
+            <div class="flex flex-col justify-center items-center gap-2">
+                <label for="email" class="dark:text-white">Email Address</label>
+    <input type="email" name="email" id="email" placeholder="Masukkan Alamat Email" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-2">
+                <label for="email" class="dark:text-white">Password</label>
+    <input type="password" name="password" id="KataSandi" placeholder="Masukkan Password" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-2">
+                <label for="email" class="dark:text-white">Confirm Password</label>
+    <input type="password" name="password" id="KonfirmasiKataSandi" placeholder="Masukkan Password Anda Kembali" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+            </div>
+<div class="flex flex-row gap-3 mt-4 justify-center items-center">
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <p class="text-sm font-medium dark:text-white">Aku Setuju Untuk Bergabung Dan Melakukan Aktivitas Sesuai Syarat Dan Ketentuan</p>
+</div>
+
+
+<div class="flex justify-center items-center">
+    <button class="w-24 text-center bg-red-700 mt-5 py-2 text-white rounded-md" type="submit">Register</button>
+                </div>
+
+        </form>
+    </div>
+</div>
+                <!--<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8" id="TampilLogin">
                     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                         <img class="mx-auto h-[150px] w-auto" src="../assett/img/52a82adc81a1da7e2e42955473455821 (1).png"
                             alt="Your Company">
@@ -142,7 +231,7 @@
 
             </div>
 
-        </div>
+        </div>-->
 
     </section>
     
@@ -154,7 +243,7 @@
                
                 <div class="relative w-full md:w-full mx-auto">
                 <div class="slide relative">
-                    <img class="w-[700px] md:w-full md:h-[650px] object-cover"
+                    <img class="w-[800px] md:w-full md:h-[650px] object-cover"
                         src="../assett/img/Banner21.png">
                 </div>
 
@@ -179,30 +268,30 @@
         <section>
 <div class="flex flex-col mt-20 justify-center items-center gap-20 mb-20">
     <h1 class="text-3xl font-bold text-red-600 dark:text-Yellow">Our Menu</h1>
-<div class="flex flex-col md:flex-row gap-20">
+<div class="flex flex-row gap-6 md:gap-20">
     <div class="flex flex-col items-center gap-4">
-       <div class="flex justify-center items-center w-[350px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
-<img src="../assett/img/Fried Chicken.png" alt="" class="w-[250px]">
+       <div class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+<img src="../assett/img/Fried Chicken.png" alt="" class="w-[120px] md:w-[250px]">
 
     </div> 
-    <h3 class="font-semibold text-lg dark:text-white">Fried Chicken</h3>
+    <h3 class="font-semibold text-sm md:text-lg dark:text-white">Fried Chicken</h3>
     </div>
     
 
 <div class="flex flex-col items-center gap-4">
-     <div class="flex justify-center items-center w-[350px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
-        <img src="../assett/img/Desert.png" alt="" class="w-[250px]">
+     <div class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+        <img src="../assett/img/Desert.png" alt="" class="w-[120px] md:w-[250px]">
         
             </div>
-         <h3 class="font-semibold text-lg dark:text-white">Dessert</h3>   
+         <h3 class="font-semibold text-sm md:text-lg dark:text-white">Dessert</h3>   
 </div>
    
 <div class="flex flex-col gap-4 items-center">
-    <div class="flex justify-center items-center w-[350px] bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
-                <img src="../assett/img/Drink.png" alt="" class="w-[250px]">
+    <div class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+                <img src="../assett/img/Drink.png" alt="" class="md:w-[250px] w-[120px]">
                 
                     </div>
-                    <h3 class="font-semibold text-lg dark:text-white">Drink</h3>
+                    <h3 class="font-semibold text-sm md:text-lg dark:text-white">Drink</h3>
 </div>
             
 </div>
@@ -218,27 +307,27 @@
 <section>
     <div class="flex flex-col justify-center items-center mt-20 gap-10 mb-20">
         <p class="text-red-600 text-xl font-extrabold">WHAT WE SERVE</p>
-        <h1 class="text-5xl font-bold dark:text-white text-center">Your Favorite Food Delivery Partner</h1>
-        <div class="flex flex-col md:flex-row gap-12">
-            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-16 dark:bg-slate-600">
-                 <img src="../assett/img/Handphone.png" alt="" class="w-[100px]">
-                <h3 class="font-bold text-xl dark:text-white">Easy To Order</h3>   
+        <h1 class="text-2xl md:text-5xl font-bold dark:text-white text-center">Your Favorite Food Delivery Partner</h1>
+        <div class="flex flex-row md:gap-20 gap-8 md:px-0 px-10">
+            <div class="flex flex-col items-center justify-center bg-red-200 gap-3 rounded-md dark:bg-slate-600 p-5">
+                 <img src="../assett/img/Handphone.png" alt="" class="w-[50px] md:w-[100px]">
+                <h3 class="font-bold text-xl dark:text-white text-center">Easy To Order</h3>   
                 <p class="font-medium text-sm text-center dark:text-white">You only need a few steps in ordering food.</p>
                 
 
             </div>
-            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-16 dark:bg-slate-600">
-                 <img src="../assett/img/Ayam Gojek.png" alt="" class="w-[300px]">
-                <h3 class="font-bold text-xl dark:text-white">Fastest Delivery</h3>   
+            <div class="flex flex-col items-center justify-center bg-red-200 gap-3 rounded-md dark:bg-slate-600 p-5">
+                 <img src="../assett/img/Ayam Gojek.png" alt="" class="w-[125px] md:w-[300px]">
+                <h3 class="font-bold text-xl dark:text-white text-center md">Fastest Delivery</h3>   
                 <p class="font-medium text-sm text-center dark:text-white">Delivery that is always ontime
                     even faster.</p>
                 
 
             </div>
 
-            <div class="flex flex-col items-center justify-center bg-red-200 w-[350px] h-[300px] gap-3 rounded-md p-16 dark:bg-slate-600">
-                <img src="../assett/img/Ember Ayam.png" alt="" class="w-[200px]">
-                <h3 class="font-bold text-xl dark:text-white">Best Quality</h3>   
+            <div class="flex flex-col items-center justify-center bg-red-200 gap-3 rounded-md dark:bg-slate-600 p-5">
+                <img src="../assett/img/Ember Ayam.png" alt="" class="w-[125px] md:w-[200px]">
+                <h3 class="font-bold text-xl dark:text-white text-center md:text-start">Best Quality</h3>   
                 <p class="font-medium text-sm text-center dark:text-white">Not only fast for us quality is also
                     number one.</p>
                 </div>
@@ -260,13 +349,13 @@
     
     <!-- Swiper -->
   <div class="swiper mySwiper w-full h-[400px] mt-10 mb-10">
-    <div class="swiper-wrapper w-full mx-0 md:mx-4 gap-10">
+    <div class="swiper-wrapper w-full mx-6 md:mx-4 gap-10">
       <div class="swiper-slide">
-        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-5 p-8">
+        <div class="flex flex-col w-[300px] bg-red-200 mx-auto gap-6 p-6 dark:bg-[#5B658A]">
             <div class="flex justify-center">
                 <img src="../assett/img/revardi-syahputra-200.png" alt="" class="w-20 border-[3px] border-red-600 rounded-[100%]">
             </div>
-            <h1 class="text-center text-lg font-bold">Revardi Syahpurta</h1>
+            <h1 class="text-center text-lg font-bold dark:text-white">Revardi Syahpurta</h1>
             <div class="flex flex-row justify-center gap-4">
                 <div class="text-yellow-500">
                     <i class="fa-solid fa-star"></i>
@@ -286,15 +375,15 @@
 
 
             </div>
-            <p class="text-lg font-medium italic text-center">"Makanannya Enak, Desertnya Enak, Tempatnya Nyaman Rekomended Dah Asli"</p>
+            <p class="text-lg font-medium italic text-center dark:text-white">"Makanannya Enak, Desertnya Enak, Tempatnya Nyaman Rekomended Dah Asli"</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-5 p-8">
+        <div class="flex flex-col w-[300px] bg-red-200 mx-auto gap-5 p-4 dark:bg-[#5B658A]">
             <div class="flex justify-center">
                 <img src="../assett/img/img4.png" alt="" class="w-20">
             </div>
-            <h1 class="text-center text-lg font-bold">Putri Intan</h1>
+            <h1 class="text-center text-lg font-bold dark:text-white">Putri Intan</h1>
             <div class="flex flex-row justify-center gap-4">
                 <div class="text-yellow-500">
                     <i class="fa-solid fa-star"></i>
@@ -314,17 +403,17 @@
 
 
             </div>
-            <p class="text-lg font-medium italic text-center">"Chicken Winger BBQ nya bikin ketagihan sih,
+            <p class="text-lg font-medium italic text-center dark:text-white">"Chicken Winger BBQ nya bikin ketagihan sih,
                 harus wajib coba chicken winger BBQnya klo 
                 kesini 👍👍"</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-6 p-10">
+        <div class="flex flex-col w-[300px] bg-red-200 mx-auto gap-6 p-6 dark:bg-[#5B658A]">
             <div class="flex justify-center">
                 <img src="../assett/img/annas-ahmad-200.png" alt="" class="w-20 border-[3px] border-red-600 rounded-[100%]">
             </div>
-            <h1 class="text-center text-lg font-bold">Annas Ahmad</h1>
+            <h1 class="text-center text-lg font-bold dark:text-white">Annas Ahmad</h1>
             <div class="flex flex-row justify-center gap-4">
                 <div class="text-yellow-500">
                     <i class="fa-solid fa-star"></i>
@@ -344,15 +433,15 @@
 
 
             </div>
-            <p class="text-lg font-medium italic text-center">"Bikin Ketagihan Buat Makan, Tempat Nyaman, Ada Wifi Komplit Dah"</p>
+            <p class="text-lg font-medium italic text-center dark:text-white">"Bikin Ketagihan Buat Makan, Tempat Nyaman, Ada Wifi Komplit Dah"</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-6 p-10">
+        <div class="flex flex-col w-[300px] bg-red-200 mx-auto gap-6 p-6 dark:bg-[#5B658A]">
             <div class="flex justify-center">
                 <img src="../assett/img/img3.png" alt="" class="w-20">
             </div>
-            <h1 class="text-center text-lg font-bold">Ellena</h1>
+            <h1 class="text-center text-lg font-bold dark:text-white">Ellena</h1>
             <div class="flex flex-row justify-center gap-4">
                 <div class="text-yellow-500">
                     <i class="fa-solid fa-star"></i>
@@ -372,16 +461,16 @@
 
 
             </div>
-            <p class="text-lg font-medium italic text-center">"Suka banget sama ice cream sundae nya, 
+            <p class="text-lg font-medium italic text-center dark:text-white">"Suka banget sama ice cream sundae nya, 
                 enak banget👍💖"</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="flex flex-col w-[400px] bg-red-300 mx-auto gap-6 p-10">
+        <div class="flex flex-col w-[300px] bg-red-200 mx-auto gap-5 p-7 dark:bg-[#5B658A]">
             <div class="flex justify-center">
                 <img src="../assett/img/img1.jpeg" alt="" class="w-20 border-4 border-red-600 rounded-[100%]">
             </div>
-            <h1 class="text-center text-lg font-bold">Mas Kumalala</h1>
+            <h1 class="text-center text-lg font-bold dark:text-white">Mas Kumalala</h1>
             <div class="flex flex-row justify-center gap-4">
                 <div class="text-yellow-500">
                     <i class="fa-solid fa-star"></i>
@@ -401,7 +490,7 @@
 
 
             </div>
-            <p class="text-lg font-medium italic text-center">"Ayamnya Enak, Juicy, Lembut Dagingnya, Murah Lagi"</p>
+            <p class="text-lg font-medium italic text-center dark:text-white">"Ayamnya Enak, Juicy, Lembut Dagingnya, Murah Lagi"</p>
         </div>
       </div>
     </div>
