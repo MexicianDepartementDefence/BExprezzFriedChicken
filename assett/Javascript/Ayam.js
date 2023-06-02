@@ -114,13 +114,11 @@ function showSlide(n) {
 
 
 
-// Validasi
+// Validasi Login
 
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const checkbox = document.getElementById("checkbox");
 const form = document.querySelector("form");
-const errormessage = document.getElementById("errormessage");
 
 form.addEventListener("submit", (e) => {
  const error = [];
@@ -137,3 +135,46 @@ if (password.value.trim() === ""){
 }
 });
 
+// Register Modal
+
+function Register(){
+    document.getElementById("Login").classList.remove("flex");
+    document.getElementById("Login").classList.add("hidden");
+    document.getElementById("Register").classList.add("flex");
+    document.getElementById("Register").classList.remove("hidden");
+}
+
+
+function TutupRegister(){
+    document.getElementById("Login").classList.remove("hidden");
+    document.getElementById("Login").classList.add("flex");
+    document.getElementById("Register").classList.add("hidden");
+    document.getElementById("Register").classList.remove("flex");
+};
+
+// Validasi Register
+
+const RegisterEmail = document.getElementById("AlamatEmail");
+const Password1 = document.getElementById("KataSandi");
+const Password2 = document.getElementById("KonfirmasiKataSandi");
+const checkbox = document.getElementById("checkbox");
+const Dokumen = document.getElementById("Dokumen");
+
+Dokumen.addEventListener("click", (e) => {
+    const errors = []
+    if (RegisterEmail.value.trim() === ""){
+        RegisterEmail.style.borderColor = "red"
+    }
+
+    if (Password1.value.trim() === ""){
+        Password1.style.borderColor = "red"
+    }
+
+    if(Password2.value.trim() === ""){
+    Password2.style.borderColor = "red"
+    }
+
+    if(checkbox.value.trim() === ""){
+        checkbox.style.borderColor = "red"
+    }
+})

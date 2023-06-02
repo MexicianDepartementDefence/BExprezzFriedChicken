@@ -1,20 +1,3 @@
-// Filter
-const AyamGoreng = document.getElementById("AyamGoreng");
-const Meenum = document.getElementById("Meenum");
-const Dessert = document.getElementById("Desert");
-const Meal = document.getElementById("Cemilan");
-const SwipeAyam = document.getElementById("SwipeAyam");
-const SwipeMinum = document.getElementById("SwipeMinum");
-const SwipeDessert = document.getElementById("SwipeDessert");
-const SwipeMeal = document.getElementById("SwipeNgemil");
-
-AyamGoreng.addEventListener("click", function(){
-    SwipeDessert.classList.remove("h-[500px]");
-    SwipeDessert.classList.add("h-0");
-    SwipeMinum.classList.remove("h-[500px]");
-    SwipeMinum.classList.add("h-0");
-})
-
 // Darkmode Toggle
 const darktoggle = document.querySelector("#dark-toggle");
 const html = document.querySelector("html");
@@ -94,3 +77,72 @@ function menu() {
         document.getElementById("header").classList.remove("shadow-lg")
     }
 }
+
+
+
+// Validasi Login
+
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+ const error = [];
+ if (email.value.trim() === ""){
+ email.style.borderColor = "red"
+}
+
+if (password.value.length < 4){
+ password.style.borderColor = "red"
+}
+
+if (password.value.trim() === ""){
+    password.style.borderColor = "red"
+}
+});
+
+// Register Modal
+
+function Register(){
+    document.getElementById("Login").classList.remove("flex");
+    document.getElementById("Login").classList.add("hidden");
+    document.getElementById("Register").classList.add("flex");
+    document.getElementById("Register").classList.remove("hidden");
+}
+
+
+function TutupRegister(){
+    document.getElementById("Login").classList.remove("hidden");
+    document.getElementById("Login").classList.add("flex");
+    document.getElementById("Register").classList.add("hidden");
+    document.getElementById("Register").classList.remove("flex");
+};
+
+// Validasi Register
+
+const RegisterEmail = document.getElementById("AlamatEmail");
+const Password1 = document.getElementById("KataSandi");
+const Password2 = document.getElementById("KonfirmasiKataSandi");
+const checkbox = document.getElementById("checkbox");
+const Dokumen = document.getElementById("Dokumen");
+
+Dokumen.addEventListener("click", (e) => {
+    const errors = []
+    if (RegisterEmail.value.trim() === ""){
+        RegisterEmail.style.borderColor = "red"
+    }
+
+    if (Password1.value.trim() === ""){
+        Password1.style.borderColor = "red"
+    }
+
+    if(Password2.value.trim() === ""){
+    Password2.style.borderColor = "red"
+    }
+
+    if(checkbox.value.trim() === ""){
+        checkbox.style.borderColor = "red"
+    }
+})
+
+
