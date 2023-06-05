@@ -143,4 +143,30 @@ Dokumen.addEventListener("click", (e) => {
     if(checkbox.value.trim() === ""){
         checkbox.style.borderColor = "red"
     }
-})
+});
+
+// Modal Pembayaran
+function KlikPembayaran(){
+    document.getElementById("Payment").classList.add("flex");
+    document.getElementById("Payment").classList.remove("hidden");
+}
+
+function TutupPembayaran(){
+    document.getElementById("Payment").classList.add("hidden");
+    document.getElementById("Payment").classList.remove("flex"); 
+}
+
+// Number Spinner
+
+const counter = document.getElementById("counter");
+const harga = document.getElementById("Harga");
+let countervalue = counter.value;
+
+function handleCounterPlus(){
+    counter.value = ++countervalue
+}
+
+function handleCounterMinus(){
+    counter.value = --countervalue
+}
+
