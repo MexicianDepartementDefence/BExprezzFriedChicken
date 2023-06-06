@@ -26,6 +26,46 @@ let changeIcon = function(icon){
     
 }
 
+// Modal Alamat
+
+function BukaAlamat(){
+    document.getElementById("Pembayaran").classList.remove("flex");
+    document.getElementById("Pembayaran").classList.add("hidden");
+    document.getElementById("Alamat").classList.add("flex");
+    document.getElementById("Alamat").classList.remove("hidden");
+}
+
+// Modal Alat Pembayaran
+function BukaAlat(){
+    document.getElementById("AlatPembayaran").classList.add("flex");
+    document.getElementById("AlatPembayaran").classList.remove("hidden");
+    document.getElementById("Alamat").classList.add("hidden");
+    document.getElementById("Alamat").classList.remove("flex");  
+}
+
+
+// Modal Gopay
+function BukaGopay(){
+    document.getElementById("Gopay").classList.add("flex");
+    document.getElementById("Gopay").classList.remove("hidden");
+    document.getElementById("AlatPembayaran").classList.add("hidden");
+    document.getElementById("AlatPembayaran").classList.remove("flex");  
+}
+
+function BukaDana(){
+    document.getElementById("Dana").classList.add("flex");
+    document.getElementById("Dana").classList.remove("hidden");
+    document.getElementById("AlatPembayaran").classList.add("hidden");
+    document.getElementById("AlatPembayaran").classList.remove("flex");  
+}
+
+function BukaCard(){
+    document.getElementById("KartuKredit").classList.add("flex");
+    document.getElementById("KartuKredit").classList.remove("hidden");
+    document.getElementById("AlatPembayaran").classList.add("hidden");
+    document.getElementById("AlatPembayaran").classList.remove("flex");  
+}
+
 
 
 // Login Modal
@@ -168,5 +208,5 @@ function handleCounterPlus(){
 
 function handleCounterMinus(){
     counter.value = --countervalue
-}
+};
 
