@@ -238,6 +238,186 @@
             </div>
         </section>
 
+        <!-- Pembayaran -->
+
+        <section>
+            <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20 scale-100 transition ease-in-out duration-200" id="Payment">
+    
+                <div class="bg-white rounded shadow w-[70%] md:w-[50%] scale-100 transition ease-in-out duration-200">
+                    <!-- Modal Header -->
+                    
+                    <!-- Modal Pesanan Combo -->
+                    <div class="flex flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-10" id="Pembayaran">
+                        <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupPembayaran()">
+                            &times;
+                        </div>
+<div class="flex flex-col gap-4 mt-2">
+    <h1 class="text-2xl text-bold dark:text-white">Pilihlah Pesanan Anda</h1>
+
+                        <div class="flex flex-row gap-6 bg-red-200 dark:bg-[#5B658A] rounded-md p-3">
+                            <input type="checkbox" name="" id="1">
+                            <h5 class="dark:text-white text-lg font-semibold">Combo Exprezz + Fanta</h5>
+                            <div class="flex justify-end items-end dark:text-white text-lg font-semibold">Rp. 106.000,00</div>
+                        </div>
+
+                        <div class="flex flex-row gap-6 bg-red-200 dark:bg-[#5B658A] rounded-md p-3">
+                            <input type="checkbox" name="" id="1">
+                            <h5 class="dark:text-white text-lg font-semibold">Combo Exprezz + Milo</h5>
+                            <div class="flex justify-end items-end dark:text-white text-lg font-semibold">Rp. 106.000,00</div>
+                        </div>
+
+                        <div class="flex flex-row gap-6 bg-red-200 dark:bg-[#5B658A] rounded-md p-3">
+                            <input type="checkbox" name="" id="1">
+                            <h5 class="dark:text-white text-lg font-semibold">Combo Exprezz + Spirte</h5>
+                            <div class="flex justify-end items-end dark:text-white text-lg font-semibold">Rp. 106.000,00</div>
+                        </div>
+
+                        <div class="flex flex-row gap-6 bg-red-200 dark:bg-[#5B658A] rounded-md p-3">
+                            <input type="checkbox" name="" id="1">
+                            <h5 class="dark:text-white text-lg font-semibold">Combo Exprezz + Air Mineral Prim'a</h5>
+                            <div class="flex justify-end items-end dark:text-white text-lg font-semibold">Rp. 106.000,00</div>
+                        </div>
+
+                        <div class="flex flex-row gap-6 bg-red-200 dark:bg-[#5B658A] rounded-md p-3">
+                            <input type="checkbox" name="" id="1">
+                            <h5 class="dark:text-white text-lg font-semibold">Combo Exprezz + Fruit Tea Lemon</h5>
+                            <div class="flex justify-end items-end dark:text-white text-lg font-semibold">Rp. 106.000,00</div>
+                        </div>
+
+                        
+
+                        <div class="bg-red-200 dark:bg-[#5B658A] rounded-md p-3">
+                            <div class="flex flex-row justify-between px-5">
+                                <div class="flex flex-col">
+                                   <p class="text-lg font-medium dark:text-white">Total Harga</p>
+                            <h6 class="text-xl font-semibold dark:text-white" id="Harga">106.000,00</h6> 
+                                </div>
+                                
+                                <div class="flex flex-row gap-3 md:gap-3">
+                                   <button class="text-white" onclick="handleCounterMinus()">-</button>
+                            <input type="text" name="" id="counter" class="text-center w-16 md:w-24" value="1">
+                            <button class="text-white" onclick="handleCounterPlus()">+</button> 
+                                </div>
+                            
+                        </div>
+                            
+                        </div>
+                        <div class="flex justify-end items-end gap-3">
+                           <button class="flex justify-center items-center bg-red-600 px-5 py-3 w-[100px] text-white rounded-lg font-semibold text-lg" onclick="BukaAlamat()">Next</button> 
+                        </div>
+
+                        </div>
+                        </div>
+                    <!-- Modal Form Alamat -->
+
+
+                    <div class="hidden flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="Alamat">
+                        <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupPembayaran()">
+                            &times;
+                        </div>
+
+                        <form action="#" method="get" class="flex flex-col p-3 gap-3">
+                            <h1 class="dark:text-white text-3xl font-bold">Masukkan Dan Alamat Anda</h1>
+<label for="Nama" class="dark:text-white text-lg font-semibold">Nama:</label>
+<input type="text" name="Nama" id="Nama" class="py-2 border-2 border-black hover:border-red-500 rounded-lg">
+<label for="Alamat" class="dark:text-white text-lg font-semibold">Alamat</label>
+<input type="text" name="Text" id="Text" class="py-2 border-2 border-black hover:border-red-500 rounded-lg">
+<div class="flex justify-end items-end gap-3">
+    <button type="submit" onclick="BukaAlat()" class="bg-red-600 px-5 py-3 rounded-lg text-white font-semibold">Next</button>
+</div>
+                        </form>
+</div>
+                        
+<!-- Modal Alat Pembayaran -->
+<div class="hidden flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="AlatPembayaran">
+    <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupPembayaran()">
+        &times;
+    </div>
+<h1 class="text-3xl font-bold dark:text-white mb-5">
+    Pilih Alat Pembayaran Anda
+</h1>
+
+<div class="flex flex-col gap-5">
+    <div class="flex flex-row gap-5 justify-center items-center">
+        <div class="bg-red-600 hover:bg-red-700 w-[200px] flex justify-center items-center text-center cursor-pointer gap-3 py-2 rounded-md" onclick="BukaGopay()">
+    <img src="../assett/img/028b92bb43a9f6c80e26c3ea403cb698.png" alt="" class="w-[50px]">
+        <p class="text-white text-lg font-medium">Gopay</p>
+    </div>
+    
+    <div class="bg-red-600 hover:bg-red-700 w-[200px] flex justify-center items-center text-center cursor-pointer gap-3 rounded-md" onclick="BukaDana()">
+        <img src="../assett/img/Dana-removebg-preview.png" alt="" class="w-[50px]">
+            <p class="text-white text-lg font-medium">Dana</p>
+        </div>
+    </div>
+    
+    <div class="flex flex-row gap-5 justify-center items-center">
+        <div class="bg-red-600 hover:bg-red-700 w-[200px] flex justify-center items-center text-center cursor-pointer gap-3 rounded-md" onclick="">
+    <img src="../assett/img/Cash On Delivery.png" alt="" class="w-[50px]">
+        <p class="text-white text-lg font-medium">COD</p>
+    </div>
+    
+    <div class="bg-red-600 hover:bg-red-700 w-[200px] flex justify-center items-center text-center cursor-pointer gap-3 rounded-md" onclick="BukaCard()">
+        <img src="../assett/img/Kartu Kredit.png" alt="" class="w-[50px]">
+            <p class="text-white text-lg font-medium">Card</p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+ <!-- Modal Gopay -->                       
+ <div class="hidden flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="Gopay">
+    <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupPembayaran()">
+        &times;
+    </div>
+    <form action="#" method="get" id="DokumenGopay">
+        <div class="flex flex-col gap-5 justify-center items-center">
+            <h1 class="flex justify-center dark:text-white">Masukkan Kode PIN Gopay</h1>
+<input type="text" name="" id="" class="border-2 border-black hover:border-red-500 rounded-lg">
+<input type="submit" value="Bayar" class="py-3 px-5 text-white bg-red-600 rounded-lg cursor-pointer">
+</div>
+        </form>
+ </div>
+ </div>
+    
+                       
+<!-- Modal Dana -->
+<div class="hidden flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="Dana">
+    <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupPembayaran()">
+        &times;
+    </div>
+    <form action="#" method="get" id="DokumenDana">
+        <div class="flex flex-col gap-5 justify-center items-center">
+            <h1 class="flex justify-center dark:text-white">Masukkan Kode PIN Dana</h1>
+<input type="text" name="" id="" class="border-2 border-black hover:border-red-500 rounded-lg">
+<input type="submit" value="Bayar" class="py-3 px-5 text-white bg-red-600 rounded-lg cursor-pointer">
+</div>
+        </form>
+    </div>
+    
+<!-- Modal Kartu Kredit -->
+<div class="hidden flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="KartuKredit">
+    <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupPembayaran()">
+        &times;
+    </div>
+    <form action="#" method="get" id="DokumenKartu">
+        <div class="flex flex-col gap-5 justify-center items-center">
+            <h1 class="flex justify-center dark:text-white">Masukkan Kode Rekening Anda</h1>
+<input type="text" name="" id="" class="border-2 border-black hover:border-red-500 rounded-lg">
+<input type="submit" value="Bayar" class="py-3 px-5 text-white bg-red-600 rounded-lg cursor-pointer">
+</div>
+        </form>
+        </div>
+        
+</div>
+ </div>
+
+            
+                
+              
+                    </section>
+
+
         <!-- Footer -->
         <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center px-40 gap-6 md:gap-0 mt-20">
             <div class="w-[250px]"><img src="../assett/img/Logo Footer.png" alt=""></div>

@@ -199,14 +199,58 @@ function TutupPembayaran(){
 // Number Spinner
 
 const counter = document.getElementById("counter");
-const harga = document.getElementById("Harga");
+const inpt = document.getElementById('inputCheckbox');
+const input2 = document.getElementById("inputCheckbox2");
 let countervalue = counter.value;
+
+
+
+let totalQuantity = 0
+const harga = document.getElementById("Harga");
+harga.textContent = totalQuantity
+
+
+inpt.addEventListener('click', (e) => {
+    console.log(e.target.checked)
+    console.log(e.target.value)
+
+    if(e.target.checked) {
+        totalQuantity += Number(e.target.value)
+        harga.textContent = `${totalQuantity}.000,00`
+    } else {
+        totalQuantity -= Number(e.target.value)
+        if(totalQuantity == 0) {
+            harga.textContent = `${totalQuantity}`
+        }
+    }
+})
 
 function handleCounterPlus(){
     counter.value = ++countervalue
+    totalQuantity = totalQuantity *= countervalue
+    harga.textContent = `${totalQuantity}.000,00`
+    console.log(countervalue)
+    console.log(totalQuantity)
 }
 
 function handleCounterMinus(){
     counter.value = --countervalue
+    totalQuantity = totalQuantity /= countervalue
+    harga.textContent = `${totalQuantity}.000,00`
+    console.log(countervalue)
+    console.log(totalQuantity)
 };
 
+input2.addEventListener('click', (f) => {
+if (f.target.checked) {
+    totalQuantity += Number(f.target.value)
+    harga.textContent = `${totalQuantity}.000,00`
+}
+
+else {
+    totalQuantity -= Number(f.target.value)
+    if(totalQuantity == 0) {
+        harga.textContent = `${totalQuantity}`
+    } 
+}
+})
