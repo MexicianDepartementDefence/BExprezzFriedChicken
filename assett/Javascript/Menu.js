@@ -43,22 +43,12 @@ function TutupModal(){
 
 // Hamburger Menu
 
-let xstatus = false;
+const navlink = document.querySelector('.nav-links')
 
+function showHideMenu(e){
+    e.classList.toggle("fa-x");
+    navlink.classList.toggle("top-[13%]")
 
-
-function showHideMenu() {
-  let menu = document.getElementById("daftarMenu");
-  if(xstatus) {
-    menu.classList.add("flex");
-    menu.classList.remove("hidden");
-    xstatus = false;
-  }
-  else {
-    menu.classList.remove("flex");
-    menu.classList.add("hidden");
-    xstatus = true;
-  }
 }
 
 
@@ -68,13 +58,13 @@ let ystatus = false;
 
 function menu() {
     if (document.documentElement.scrollTop > 20) {
-        document.getElementById("header").classList.add("bg-white");
+        document.getElementById("header").classList.add("bg-[#FFF6F0]");
         document.getElementById("header").classList.add("shadow-lg")
     }
 
     else {
         document.getElementById("header").classList.remove("bg-white");
-        document.getElementById("header").classList.remove("shadow-lg")
+        document.getElementById("header").classList.remove("bg-[#FFF6F0]")
     }
 }
 
