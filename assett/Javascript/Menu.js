@@ -43,12 +43,22 @@ function TutupModal(){
 
 // Hamburger Menu
 
-const navlink = document.querySelector('.nav-links')
+let ham = document.getElementById("hamm");
+let xstatus = false;
+function Open(){
 
-function showHideMenu(e){
-    e.classList.toggle("fa-x");
-    navlink.classList.toggle("top-[13%]")
+console.log(xstatus)
 
+    if(xstatus){
+ham.classList.add("w-[75%]");
+ham.classList.remove("w-0");
+xstatus = false;
+    }
+    else{
+ham.classList.add("w-0");
+ham.classList.remove("w-[75%]");
+xstatus = true;
+    }
 }
 
 
@@ -58,13 +68,13 @@ let ystatus = false;
 
 function menu() {
     if (document.documentElement.scrollTop > 20) {
-        document.getElementById("header").classList.add("bg-[#FFF6F0]");
-        document.getElementById("header").classList.add("shadow-lg")
+        document.getElementById("header").classList.add("bg-white");
+        document.getElementById("header").classList.add("shadow-lg");
     }
 
     else {
         document.getElementById("header").classList.remove("bg-white");
-        document.getElementById("header").classList.remove("bg-[#FFF6F0]")
+        document.getElementById("header").classList.remove("shadow-lg");
     }
 }
 

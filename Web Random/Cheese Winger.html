@@ -18,65 +18,66 @@
 
     <!-- Navbar -->
     <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
-        <header class="fixed z-20 top-0 w-full md:w-full" id="header">
-            <div class="bg-[#FFF6F0] dark:bg-Dark">
-                <nav class="w-full flex flex-row justify-between items-center py-2 px-5">
-                    <a href="../Web Random/Beranda.html" class="w-[100px] ml-10"><img src="../assett/img/Logo Navbar.png" alt="">
-                    </a>
-    
-                    <ul class="md:flex flex-row gap-5 items-center hidden">
-    
-                        <li><a href="../Web Random/Beranda.html" class="text-red-600">Home</a></li>
-    
-                        <li><a href="../Web Random/Menu.html" class="text-red-600">Menu</a></li>
-                        
-                        <li><button class="relative text-red-600 focus:outline-none group">
-                            <a href="../Web Random/Menu.html">Delivery</a>
-                        </button></li>
-                        
-                        
-                        <li class="flex items-center">
+            <header class="fixed z-20 top-0 w-full" id="header">
+        
+                <div class="md:hidden fixed bg-[#FFF6F0] dark:bg-Dark w-0 h-[100vh] text-red-700 shadow-2xl text-lg font-semibold overflow-hidden origin-left duration-500" id="hamm">
+                    
+                    <ul class="flex flex-col gap-10 p-10">
+                        <div class="">
+                        <img src="../assett/img/Logo Navbar.png" alt="" class="w-[200px]">
+                    </div>
+                        <li><a href="../Web Random/Beranda.html">Home</a></li>
+                        <li><a href="../Web Random/Menu.html">Menu</a></li>
+                        <li><a href="../Web Random/About Us.html">About Us</a></li>
+                    </ul>
+                        </div>
+                </div>
+                <div class="bg-[#FFF6F0] dark:bg-Dark">
+                    <nav class="w-full flex flex-row justify-between items-center py-2 px-5">
+                        <a href="../Web Random/Beranda.html" class="w-[100px] ml-10"><img src="../assett/img/Logo Navbar.png" alt="">
+                        </a>
+        
+                        <ul class="md:flex flex-row gap-5 items-center hidden">
+        
+                            <li><a href="../Web Random/Beranda.html" class="text-red-600">Home</a></li>
+        
+                            <li><a href="../Web Random/Menu.html" class="text-red-600">Menu</a></li>
+                            
+                            <li><button class="relative text-red-600 focus:outline-none group">
+                                <a href="../Web Random/Menu.html">About Us</a>
+                            </button></li>
+                            
+                            
+                            <li class="flex items-center">
+                                <input type="checkbox" class="hidden" id="dark-toggle">
+                                <label for="dark-toggle" >
+                                        <div class="text-red-600 cursor-pointer" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
+                                </label>
+                            <li>
+                                <div class="border-2 border-red-600 rounded-md px-3 py-1 mt-1">
+                                    <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
+                                </div>
+        
+                            </li>
+        
+                            
+        
+        
+                        </ul>
+                        <div class="flex flex-row md:hidden gap-6">
                             <input type="checkbox" class="hidden" id="dark-toggle">
-                            <label for="dark-toggle" >
-                                    <div class="text-red-600 cursor-pointer" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
-                            </label>
-                        <li>
-                            <div class="border-2 border-red-600 rounded-md px-3 py-1 mt-1">
+                                <label for="dark-toggle">
+                                        <div class="text-red-600 cursor-pointer transition-all duration-500 mt-1.5" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
+                                </label>
+                            <div class="border-2 border-red-600 rounded-md px-3 py-1">
                                 <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
                             </div>
-    
-                        </li>
-    
+        
+                        <div class="text-red-600 block md:hidden text-center transition-all duration-1000 ease-in-out cursor-pointer" onclick="Open(this)">
+                            <i class="fa-solid fa-bars"></i></div>
+                    </nav>
                         
-    
-    
-                    </ul>
-                    <div class="flex flex-row md:hidden gap-6">
-                        <input type="checkbox" class="hidden" id="dark-toggle">
-                            <label for="dark-toggle">
-                                    <div class="text-red-600 cursor-pointer transition-all duration-500 mt-1.5" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
-                            </label>
-                        <div class="border-2 border-red-600 rounded-md px-3 py-1">
-                            <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
-                        </div>
-    
-                    <div class="text-red-600 block md:hidden text-center transition-all duration-1000 ease-in-out cursor-pointer" onclick="showHideMenu()">
-                        <i class="fa-solid fa-bars"></i></div>
-                </nav>
-                    </div>
-                    
-    
-                <div class="hidden flex-col transition-all ease-in-out duration-1000 md:hidden w-full dark:bg-Dark bg-[#FFF6F0] gap-6 p-6" id="daftarMenu">
-                    <a href="../Web Random/Beranda.html" class="text-black dark:text-white border-b-2 border-black pb-2 dark:border-white">Home</a>
-                    <a href="../Web Random/Menu.html" class="text-black dark:text-white border-b-2 border-black pb-2 dark:border-white">Menu</a>
-                    <a href="../Web Random/About Us.html" class="text-black dark:text-white border-b-2 border-black pb-2 dark:border-white">About Us</a>
-                </div>
-            </div>
-            </div>
-    
-        </header>
-    
-        </div>
+                        </header>
     
         <!-- Modal Login -->
     

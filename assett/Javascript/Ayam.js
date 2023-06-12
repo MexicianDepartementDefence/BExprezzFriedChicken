@@ -43,12 +43,22 @@ function TutupModal(){
 
 // Hamburger Menu
 
-const navlink = document.querySelector('.nav-links')
+let ham = document.getElementById("hamm");
+let xstatus = false;
+function Open(){
 
-function showHideMenu(e){
-    e.classList.toggle("fa-x");
-    navlink.classList.toggle("top-[13%]")
+console.log(xstatus)
 
+    if(xstatus){
+ham.classList.add("w-[75%]");
+ham.classList.remove("w-0");
+xstatus = false;
+    }
+    else{
+ham.classList.add("w-0");
+ham.classList.remove("w-[75%]");
+xstatus = true;
+    }
 }
 
 

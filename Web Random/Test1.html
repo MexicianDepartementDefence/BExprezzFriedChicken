@@ -16,54 +16,75 @@
     </script>
 </head>
 <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
-    <header class="bg-[#FFF6F0] dark:bg-Dark">
-        <nav class="flex justify-between items-center w-[92%] mx-auto">
-            <div>
-               <a href="../Web Random/Beranda.html">
-                <img src="../assett/img/Logo Navbar.png" alt="" class="w-28 ml-10">
-               </a>
-                
+    <header class="fixed z-20 top-0 w-full" id="header">
+        
+        <div class="md:hidden fixed bg-[#FFF6F0] dark:bg-Dark w-0 h-[100vh] text-red-700 shadow-2xl text-lg font-semibold overflow-hidden origin-left duration-500" id="hamm">
+            <div class="">
+                <img src="../assett/img/Logo Navbar.png" alt="" class="w-[200px]">
             </div>
-            <div class="nav-links duration-500 md:static absolute bg-[#FFF6F0] md:min-h-fit min-h-[100px] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 dark:bg-Dark" id="NavLink">
-                <ul class="flex flex-col md:flex-row md:items-center md:gap-5 gap-8">
-                    <li>
-                        <a href="../Web Random/Beranda.html" class="text-red-600">Home</a>
-                    </li>
-                    <li>
-                        <a href="../Web Random/Menu.html" class="text-red-600">Menu</a>
-                    </li>
-                    <li>
-                        <a href="../Web Random/About Us.html" class="text-red-600">About Us</a>
-                    </li>
-                    <li>
-                        <div class="hidden md:flex flex-row gap-5">
-                            <input type="checkbox" class="hidden" id="dark-toggle">
-                    <label for="dark-toggle">
-                            <div class="text-red-600 cursor-pointer transition-all duration-500 mt-1.5" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
-                    </label>
-                    <button class="border-red-600 border-2 rounded-md text-red-600 py-1 px-3" onclick="KlikModal()">
-                        Login
-                     </button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <ul class="flex flex-col gap-10 p-10">
+                <li><a href="../Web Random/Beranda.html">Home</a></li>
+                <li><a href="../Web Random/Menu.html">Menu</a></li>
+                <li><a href="../Web Random/About Us.html">About Us</a></li>
+            </ul>
+                </div>
+        </div>
+        <div class="bg-[#FFF6F0] dark:bg-Dark">
+            <nav class="w-full flex flex-row justify-between items-center py-2 px-5">
+                <a href="../Web Random/Beranda.html" class="w-[100px] ml-10"><img src="../assett/img/Logo Navbar.png" alt="">
+                </a>
 
-            <div class="flex md:hidden flex-row gap-6">
-                <input type="checkbox" class="hidden" id="dark-toggle">
-                    <label for="dark-toggle">
-                            <div class="text-red-600 cursor-pointer transition-all duration-500 mt-1.5" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
-                    </label>
-                <div class="border-2 border-red-600 rounded-md px-3 py-1">
-                    <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
-                </div>
-                <div class="text-red-600 block md:hidden text-center transition duration-500 ease-out cursor-pointer">
-                    <i class="fa-solid fa-bars" onclick="showHideMenu(this)"></i>
-                </div>
-        </nav>
-    </header>
-  
-    </div>
+                <ul class="md:flex flex-row gap-5 items-center hidden">
+
+                    <li><a href="../Web Random/Beranda.html" class="text-red-600">Home</a></li>
+
+                    <li><a href="../Web Random/Menu.html" class="text-red-600">Menu</a></li>
+                    
+                    <li><button class="relative text-red-600 focus:outline-none group">
+                        <a href="../Web Random/Menu.html">About Us</a>
+                    </button></li>
+                    
+                    
+                    <li class="flex items-center">
+                        <input type="checkbox" class="hidden" id="dark-toggle">
+                        <label for="dark-toggle" >
+                                <div class="text-red-600 cursor-pointer" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
+                        </label>
+                    <li>
+                        <div class="border-2 border-red-600 rounded-md px-3 py-1 mt-1">
+                            <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
+                        </div>
+
+                    </li>
+
+                    
+
+
+                </ul>
+                <div class="flex flex-row md:hidden gap-6">
+                    <input type="checkbox" class="hidden" id="dark-toggle">
+                        <label for="dark-toggle">
+                                <div class="text-red-600 cursor-pointer transition-all duration-500 mt-1.5" ><i class="fa-solid fa-moon" onclick="changeIcon(this)"></i></div>
+                        </label>
+                    <div class="border-2 border-red-600 rounded-md px-3 py-1">
+                        <a href="#" class="text-red-600 show-modal" onclick="KlikModal()">Login</a>
+                    </div>
+
+                <div class="text-red-600 block md:hidden text-center transition-all duration-1000 ease-in-out cursor-pointer" onclick="Open(this)">
+                    <i class="fa-solid fa-bars"></i></div>
+            </nav>
+                
+                </header>
+
+                <!--<div class="md:hidden fixed bg-[#FFF6F0] dark:bg-Dark w-0 h-[100vh] text-red-700 shadow-2xl text-lg font-semibold overflow-hidden origin-left duration-500" id="hamm">
+                    <ul class="flex flex-col gap-10">
+                        <li><a href="../Web Random/Beranda.html">Home</a></li>
+                        <li><a href="../Web Random/Menu.html">Menu</a></li>
+                        <li><a href="../Web Random/About Us.html">About Us</a></li>
+                    </ul>
+                        </div>-->
+
+               
 
     <section>
         <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20 scale-100 transition ease-in-out duration-200" id="Modal">
@@ -165,6 +186,71 @@
                
     </section>
 
+    <section>
+        <!-- Gambar About Us -->
+
+    <div class="">
+        <img src="../assett/img/About Us Image.png" alt="" class="w-full">
+    </div>
+
+    <div class="p-24 text-lg font-medium dark:text-white">
+        <p class="text-justify">B'exprezz merupakan restoran fast food di indonesia yang diawali pada tahun 2020 di
+            Bekasi, Jawa Barat. Dengan produk unggulan berupa Ayam bernama Winger BBQ, B'exprezz hingga saat ini telah
+            memiliki puluhan restoran yang tersebar di lebih dari 30 daerah, salah satunya Bogor. B'exprezz pertama kali
+            masuk ke Bogor pada tahun 2022 dengan membuka restoran pertamanya di Malabar, Rekso Nasional Food (RNF) yang
+            merupakan salah satu anak perusahaan dari Rekso Group menandatangani Master Franchise Agreement dengan
+            B'exprezz Nasional Property Company (BNPCO) yang memberikan izin untuk mengoperasikan semua restoran dengan
+            brand B'exprezz dan membuka restoran baru di seluruh Indonesia. Hingga saat ini PT. DDG telah membuka
+            sekiranya lebih dari 90 gerai B'exprezz tersebar di berbagai kota di Indonesia yang didukung dengan lebih
+            dari 3.400 karyawan di seluruh Indonesia. PT. DDG melalui B'exprezz Indonesia selalu berkomitmen penuh
+            menyuguhkan pelayanan yang terbaik bagi pelanggan, menghadirkan kualitas makanan terdepan, serta memberikan
+            manfaat yang besar bagi masyarakat Indonesia.</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-24 px-20">
+        <div class="flex flex-col gap-10">
+            <h1 class="text-xl font-medium dark:text-white px-12">Visi</h1>
+            <p class="text-lg font-medium dark:text-white text-justify px-12">
+                Visi B'exprezz adalah menjadi restoran cepat saji dengan pelayanan terbaik di indonesia. Untuk mencapai
+                visi ini, B'exprezz selalu menjamin mutu produk-produknya, memberikan pelayanan yang memuaskan,
+                menawarkan kebersihan dan keamanan produk pangan serta nilai-nilai tambah lainnya. Senyum konsumen
+                adalah hal penting untuk B'exprezz.
+            </p>
+        </div>
+
+        <div class="">
+            <img src="../assett/img/About Us Image2.png" alt="" class="w-[800px]">
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-24 px-20 mt-40">
+        <div class="">
+            <img src="../assett/img/About Us Image3.png" alt="" class="w-[800px]">
+        </div>
+        <div class="flex flex-col gap-10">
+            <h1 class="text-xl font-medium dark:text-white px-12">
+        Misi
+    </h1>
+
+    <p class="text-lg font-medium dark:text-white px-12">
+        - Menjadi perusahaan terbaik bagi semua karyawan kami di setiap komunitas di seluruh indonesia.
+    </p>
+
+    <p class="text-lg font-medium dark:text-white px-12">
+        - Menghadirkan pelayanan dengan sistem operasional yang unggul bagi setiap konsumen kami di setiap restoran
+        cabang B'exprezz.
+    </p>
+
+    <p class="text-lg font-medium dark:text-white px-12">
+        - Terus mengalami perkembangan ke arah yang menguntungkan sebagai sebuah brand, serta terus mengembangkan sistem
+        operasional B'exprezz ke arah yang lebih baik lagi lewat inovasi dan teknologi.
+    </p>
+
+        </div>
+    </div>
+    </section>
+
+
     <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center px-40 gap-6 md:gap-0 mt-32">
         <div class="w-[250px]"><img src="../assett/img/Logo Footer.png" alt=""></div>
         <div class="flex flex-col gap-6 p-6 border-white border-l-0 md:border-l-8 border-t-8 md:border-t-0">
@@ -217,98 +303,23 @@ let changeIcon = function(icon){
     
 }
 
+// Hamburger Bar
+let ham = document.getElementById("hamm");
+let xstatus = false;
+function Open(){
 
+console.log(xstatus)
 
-
-// Login Modal
-
-function KlikModal(){
-     document.getElementById("Modal").classList.add("flex");
-     document.getElementById("Modal").classList.remove("hidden");
- 
-}
-
-function TutupModal(){
- document.getElementById("Modal").classList.add("hidden");
- document.getElementById("Modal").classList.remove("flex");
-}
-
-// Validasi Login
-
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (e) => {
- const error = [];
- if (email.value.trim() === ""){
- email.style.borderColor = "red"
-}
-
-if (password.value.length < 4){
- password.style.borderColor = "red"
-}
-
-if (password.value.trim() === ""){
-    password.style.borderColor = "red"
-}
-});
-
-// Register Modal
-
-function Register(){
-    document.getElementById("Login").classList.remove("flex");
-    document.getElementById("Login").classList.add("hidden");
-    document.getElementById("Register").classList.add("flex");
-    document.getElementById("Register").classList.remove("hidden");
-}
-
-
-function TutupRegister(){
-    document.getElementById("Login").classList.remove("hidden");
-    document.getElementById("Login").classList.add("flex");
-    document.getElementById("Register").classList.add("hidden");
-    document.getElementById("Register").classList.remove("flex");
-};
-
-// Validasi Register
-
-const RegisterEmail = document.getElementById("AlamatEmail");
-const Password1 = document.getElementById("KataSandi");
-const Password2 = document.getElementById("KonfirmasiKataSandi");
-const checkbox = document.getElementById("checkbox");
-const Dokumen = document.getElementById("Dokumen");
-
-Dokumen.addEventListener("click", (e) => {
-    const errors = []
-    if (RegisterEmail.value.trim() === ""){
-        RegisterEmail.style.borderColor = "red"
+    if(xstatus){
+ham.classList.add("w-[75%]");
+ham.classList.remove("w-0");
+xstatus = false;
     }
-
-    if (Password1.value.trim() === ""){
-        Password1.style.borderColor = "red"
+    else{
+ham.classList.add("w-0");
+ham.classList.remove("w-[75%]");
+xstatus = true;
     }
-
-    if(Password2.value.trim() === ""){
-    Password2.style.borderColor = "red"
-    }
-
-    if(checkbox.value.trim() === ""){
-        checkbox.style.borderColor = "red"
-    }
-});
-
-// Modal Pembayaran
-function KlikPembayaran(){
-    document.getElementById("Payment").classList.add("flex");
-    document.getElementById("Payment").classList.remove("hidden");
 }
-
-function TutupPembayaran(){
-    document.getElementById("Payment").classList.add("hidden");
-    document.getElementById("Payment").classList.remove("flex"); 
-}
-
-
 </script>
 </html>
