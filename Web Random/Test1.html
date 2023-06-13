@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assett/src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
@@ -186,69 +187,156 @@
                
     </section>
 
-    <section>
-        <!-- Gambar About Us -->
+  <section>
+ <!-- Swiper -->
+ <div class="swiper mySwiper w-full h-[400px] mt-28">
+    <div class="swiper-wrapper gap-16 mx-10">
+      <div class="swiper-slide bg-red-200 mx-auto">
+        <div class="flex flex-col gap-4">
+            <div class="flex justify-center p-4 md:p-0">
+                <img src="../assett/img/revardi-syahputra-200.png" alt="" class="w-14 md:w-20 border-[3px] border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Revardi Syahpurta</h1>
+            <div class="flex flex-row justify-center gap-4 px-2">
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
-    <div class="">
-        <img src="../assett/img/About Us Image.png" alt="" class="w-full">
-    </div>
 
-    <div class="p-24 text-lg font-medium dark:text-white">
-        <p class="text-justify">B'exprezz merupakan restoran fast food di indonesia yang diawali pada tahun 2020 di
-            Bekasi, Jawa Barat. Dengan produk unggulan berupa Ayam bernama Winger BBQ, B'exprezz hingga saat ini telah
-            memiliki puluhan restoran yang tersebar di lebih dari 30 daerah, salah satunya Bogor. B'exprezz pertama kali
-            masuk ke Bogor pada tahun 2022 dengan membuka restoran pertamanya di Malabar, Rekso Nasional Food (RNF) yang
-            merupakan salah satu anak perusahaan dari Rekso Group menandatangani Master Franchise Agreement dengan
-            B'exprezz Nasional Property Company (BNPCO) yang memberikan izin untuk mengoperasikan semua restoran dengan
-            brand B'exprezz dan membuka restoran baru di seluruh Indonesia. Hingga saat ini PT. DDG telah membuka
-            sekiranya lebih dari 90 gerai B'exprezz tersebar di berbagai kota di Indonesia yang didukung dengan lebih
-            dari 3.400 karyawan di seluruh Indonesia. PT. DDG melalui B'exprezz Indonesia selalu berkomitmen penuh
-            menyuguhkan pelayanan yang terbaik bagi pelanggan, menghadirkan kualitas makanan terdepan, serta memberikan
-            manfaat yang besar bagi masyarakat Indonesia.</p>
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-24 px-20">
-        <div class="flex flex-col gap-10">
-            <h1 class="text-xl font-medium dark:text-white px-12">Visi</h1>
-            <p class="text-lg font-medium dark:text-white text-justify px-12">
-                Visi B'exprezz adalah menjadi restoran cepat saji dengan pelayanan terbaik di indonesia. Untuk mencapai
-                visi ini, B'exprezz selalu menjamin mutu produk-produknya, memberikan pelayanan yang memuaskan,
-                menawarkan kebersihan dan keamanan produk pangan serta nilai-nilai tambah lainnya. Senyum konsumen
-                adalah hal penting untuk B'exprezz.
-            </p>
+            </div>
+            <p class="text-sm md:text-lg font-semibold md:font-medium italic text-center dark:text-white">"Makanannya Enak, Desertnya Enak, Tempatnya Nyaman Rekomended Dah Asli"</p>
         </div>
+      </div>
+      <div class="swiper-slide bg-red-200 mx-auto">
+        <div class="flex flex-col gap-4 p-4 md:p-0">
+            <div class="flex justify-center">
+                <img src="../assett/img/img4.png" alt="" class="w-14 md:w-20 border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Putri Intan</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
-        <div class="">
-            <img src="../assett/img/About Us Image2.png" alt="" class="w-[800px]">
+
+            </div>
+            <p class="text-sm md:text-lg font-medium italic text-center dark:text-white px-2">Chicken Winger BBQ nya bikin ketagihan sih,
+                harus wajib coba chicken winger BBQnya klo 
+                kesini 👍👍</p>
         </div>
+      </div>
+      <div class="swiper-slide bg-red-200 mx-auto">
+        <div class="flex flex-col gap-4">
+            <div class="flex justify-center">
+                <img src="../assett/img/annas-ahmad-200.png" alt="" class="w-14 md:w-20 border-[3px] border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Annas Ahmad</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+
+            </div>
+            <p class="text-sm md:text-lg font-medium italic text-center dark:text-white px-2">"Bikin Ketagihan Buat Makan, Tempat Nyaman, Ada Wifi Komplit Dah"</p>
+        </div>
+      </div>
+      <div class="swiper-slide bg-red-200 mx-auto">
+        <div class="flex flex-col gap-4">
+            <div class="flex justify-center">
+                <img src="../assett/img/img3.png" alt="" class="w-14 md:w-20 border-red-600 rounded-[100%]">
+            </div>
+            <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Ellena</h1>
+            <div class="flex flex-row justify-center gap-4">
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+
+            </div>
+            <p class="text-sm md:text-lg font-medium italic text-center dark:text-white">"Suka banget sama ice cream sundae nya, 
+                enak banget👍💖"</p>
+        </div>
+      </div>
+      <div class="swiper-slide bg-red-200 mx-auto"><div class="flex flex-col gap-4">
+        <div class="flex justify-center">
+            <img src="../assett/img/img1.jpeg" alt="" class="w-14 md:w-20 border-[3px] border-red-600 rounded-[100%]">
+        </div>
+        <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Mas Kumalala</h1>
+        <div class="flex flex-row justify-center gap-4">
+            <div class="text-yellow-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="text-yellow-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="text-yellow-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="text-yellow-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="text-yellow-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+
+        </div>
+        <p class="text-sm md:text-lg font-semibold md:font-medium italic text-center dark:text-white px-2">"Ayamnya Enak, Juicy, Lembut Dagingnya, Murah Lagi"</p>
+    </div></div>
     </div>
-
-    <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-24 px-20 mt-40">
-        <div class="">
-            <img src="../assett/img/About Us Image3.png" alt="" class="w-[800px]">
-        </div>
-        <div class="flex flex-col gap-10">
-            <h1 class="text-xl font-medium dark:text-white px-12">
-        Misi
-    </h1>
-
-    <p class="text-lg font-medium dark:text-white px-12">
-        - Menjadi perusahaan terbaik bagi semua karyawan kami di setiap komunitas di seluruh indonesia.
-    </p>
-
-    <p class="text-lg font-medium dark:text-white px-12">
-        - Menghadirkan pelayanan dengan sistem operasional yang unggul bagi setiap konsumen kami di setiap restoran
-        cabang B'exprezz.
-    </p>
-
-    <p class="text-lg font-medium dark:text-white px-12">
-        - Terus mengalami perkembangan ke arah yang menguntungkan sebagai sebuah brand, serta terus mengembangkan sistem
-        operasional B'exprezz ke arah yang lebih baik lagi lewat inovasi dan teknologi.
-    </p>
-
-        </div>
-    </div>
-    </section>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  </section>
 
 
     <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center px-40 gap-6 md:gap-0 mt-32">
@@ -321,5 +409,22 @@ ham.classList.remove("w-[75%]");
 xstatus = true;
     }
 }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 </script>
 </html>

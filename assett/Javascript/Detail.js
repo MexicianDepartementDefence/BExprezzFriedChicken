@@ -26,21 +26,12 @@ let changeIcon = function(icon){
     
 }
 
-// Modal Alamat
-
-function BukaAlamat(){
-    document.getElementById("Pembayaran").classList.remove("flex");
-    document.getElementById("Pembayaran").classList.add("hidden");
-    document.getElementById("Alamat").classList.add("flex");
-    document.getElementById("Alamat").classList.remove("hidden");
-}
-
 // Modal Alat Pembayaran
 function BukaAlat(){
     document.getElementById("AlatPembayaran").classList.add("flex");
     document.getElementById("AlatPembayaran").classList.remove("hidden");
-    document.getElementById("Alamat").classList.add("hidden");
-    document.getElementById("Alamat").classList.remove("flex");  
+document.getElementById("Pembayaran").classList.add("hidden");
+document.getElementById("Pembayaran").classList.remove("flex");
 }
 
 
@@ -126,11 +117,18 @@ function menu() {
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const form = document.querySelector("form");
+const errormessage = document.getElementById("errormessage")
 
 form.addEventListener("submit", (e) => {
  const error = [];
+
+ if(email.value.trim() === ""){
+    error.push("Data Anda Harus Diisi")
+ }
+
  if (email.value.trim() === ""){
  email.style.borderColor = "red"
+
 }
 
 if (password.value.length < 4){
@@ -140,9 +138,13 @@ if (password.value.length < 4){
 if (password.value.trim() === ""){
     password.style.borderColor = "red"
 }
-});
 
-// Validasi Alamat
+if(error.length > 0){
+    e.preventDefault();
+    errormessage.toggleAttribute('hidden');
+    errormessage.innerHTML = error.join(',')
+}
+});
 
 // Register Modal
 
@@ -168,9 +170,17 @@ const Password1 = document.getElementById("KataSandi");
 const Password2 = document.getElementById("KonfirmasiKataSandi");
 const checkbox = document.getElementById("checkbox");
 const Dokumen = document.getElementById("Dokumen");
+const Alamat = document.getElementById("alamat");
+const nama = document.getElementById("nama");
+const pesanerror = document.getElementById("errormessage");
 
 Dokumen.addEventListener("click", (e) => {
-    const errors = []
+    const errors = [];
+
+    if(RegisterEmail.value.trim() === ""){
+        errors.push("Anda Harus Mengisi Datanya Dengan Benar")
+    }
+
     if (RegisterEmail.value.trim() === ""){
         RegisterEmail.style.borderColor = "red"
     }
@@ -183,10 +193,22 @@ Dokumen.addEventListener("click", (e) => {
     Password2.style.borderColor = "red"
     }
 
-    if(checkbox.value.trim() === ""){
-        checkbox.style.borderColor = "red"
+    if(Alamat.value.trim() === ""){
+        Alamat.style.borderColor = "red"
     }
-});
+
+    if(nama.value.trim() === ""){
+        nama.style.borderColor = "red"
+    }
+
+    if(errors.length > 0){
+        e.preventDefault();
+        pesanerror.toggleAttribute("hidden");
+        pesanerror.innerHTML = errors.join(", ")
+
+    }
+})
+
 
 // Modal Pembayaran
 function KlikPembayaran(){
@@ -257,3 +279,33 @@ else {
     } 
 }
 })
+
+// Modal Afterpay
+
+function BukaAfterGoPay(){
+    document.getElementById("AfterPay").classList.remove("hidden");
+    document.getElementById("AfterPay").classList.add("flex");
+    document.getElementById("Gopay").classList.add("hidden");
+    document.getElementById("Gopay").classList.remove("flex");
+}
+
+function BukaAfterDana(){
+    document.getElementById("AfterPay").classList.remove("hidden");
+    document.getElementById("AfterPay").classList.add("flex");
+    document.getElementById("Dana").classList.add("hidden");
+    document.getElementById("Dana").classList.remove("flex");
+}
+
+function BukaAfterCard(){
+    document.getElementById("AfterPay").classList.remove("hidden");
+    document.getElementById("AfterPay").classList.add("flex");
+    document.getElementById("KartuKredit").classList.add("hidden");
+    document.getElementById("KartuKredit").classList.remove("flex");
+}
+
+function BukaAfterpay(){
+    document.getElementById("AfterPay").classList.remove("hidden");
+    document.getElementById("AfterPay").classList.add("flex");
+    document.getElementById("AlatPembayaran").classList.add("hidden");
+    document.getElementById("AlatPembayaran").classList.remove("flex");
+}

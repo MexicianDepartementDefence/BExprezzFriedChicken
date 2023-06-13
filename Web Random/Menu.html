@@ -20,7 +20,6 @@ document.documentElement.classList.remove('dark')
 
 <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
   <header class="fixed z-20 top-0 w-full md:w-full" id="header">
-    <header class="fixed z-20 top-0 w-full" id="header">
 
         <div class="md:hidden fixed bg-[#FFF6F0] dark:bg-Dark w-0 h-[100vh] text-red-700 shadow-2xl text-lg font-semibold overflow-hidden origin-left duration-500" id="hamm">
             <div class="">
@@ -83,104 +82,114 @@ document.documentElement.classList.remove('dark')
   <!-- Modal Login -->
 
   <section>
-      <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20 scale-100 transition ease-in-out duration-200" id="Modal">
+    <div class="h-screen w-full fixed left-0 top-0 hidden gap-6 justify-center items-center bg-black bg-opacity-50 z-20 scale-100 transition ease-in-out duration-200" id="Modal">
 
-          <div class="bg-white rounded shadow w-[70%] md:w-[50%]">
-              <!-- Modal Header -->
-              
-              <!-- Modal Body -->
-                  
-              <div class="flex flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="Login">
-                  <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4" onclick="TutupModal()">
-                      &times;
-                  </div>
-                  <div class="mb-2 flex flex-col justify-center items-center gap-2">
-                      <img src="../assett/img/Logo Navbar.png" alt="" class="w-[120px]">
-                      <h1 class="text-3xl font-bold dark:text-white">Welcome Back</h1>
-                      <p class="text-sm text-gray-500">Tolong Masukkan Akun Anda</p>
-                  </div>
+        <div class="bg-white rounded shadow w-[70%] md:w-[50%]">
+            <!-- Modal Header -->
+            
+            <!-- Modal Body -->
+                
+            <div class="flex flex-col bg-[#FFF6F0] dark:bg-Dark transition-all duration-300 ease-in-out p-5" id="Login">
+                <div class="font-bold text-black text-3xl cursor-pointer flex justify-end items-end mr-5 mt-4 dark:text-white" onclick="TutupModal()">
+                    &times;
+                </div>
+                <div class="mb-2 flex flex-col justify-center items-center gap-2">
+                    <img src="../assett/img/Logo Navbar.png" alt="" class="w-[120px]">
+                    <h1 class="text-3xl font-bold dark:text-white">Welcome Back</h1>
+                    <p class="text-sm text-gray-500">Tolong Masukkan Akun Anda</p>
+                </div>
 <div class="flex flex-row justify-center items-center gap-3">
-  <button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
-      <img src="../assett/img/Google-removebg-preview.png" alt="" class="w-10">
-  </button>
-  <button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
-      <img src="../assett/img/Facebook.png" alt="" class="w-10">
-  </button>
-  <button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
-      <img src="../assett/img/Twitter-removebg-preview.png" alt="" class="w-10">
-  </button>
+<button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
+    <img src="../assett/img/Google-removebg-preview.png" alt="" class="w-10">
+</button>
+<button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
+    <img src="../assett/img/Facebook.png" alt="" class="w-10">
+</button>
+<button class="border-2 px-5 py-3 flex justify-center items-center rounded-lg border-black">
+    <img src="../assett/img/Twitter-removebg-preview.png" alt="" class="w-10">
+</button>
 </div>
 <div class="mb-2 mt-10 text-center">
 <p class="text-sm text-gray-500">Atau</p>
 </div>
 
 <div class="flex flex-col gap-3">
-  <form action="#" method="GET">
-      <div class="flex flex-col justify-center items-center gap-2">
-          <label for="email" class="dark:text-white">Email Address</label>
+<form action="#" method="GET">
+    <div class="flex flex-col justify-center items-center gap-2">
+        <label for="email" class="dark:text-white">Email Address</label>
 <input type="email" name="email" id="email" placeholder="Masukkan Alamat Email Dibawah" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
-      </div>
+    </div>
 
-      <div class="flex flex-col justify-center items-center gap-2 mt-2">
-          <label for="email" class="dark:text-white">Password</label>
+    <div class="flex flex-col justify-center items-center gap-2 mt-2">
+        <label for="email" class="dark:text-white">Password</label>
 <input type="password" name="password" id="password" placeholder="Masukkan Password Dibawah" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
-      </div>
-          <div class="flex justify-center items-center">
+    </div>
+
+<p id="errormessage" class="text-red-700 text-center p-4" hidden></p>
+        <div class="flex justify-center items-center">
 <button class="w-24 text-center bg-red-700 mt-5 py-2 text-white rounded-md" type="submit">Sign In</button>
-          </div>
+        </div>
 
 
-  </form>
-  <p class="text-sm text-center font-medium dark:text-white flex gap-2 justify-center mt-3">Don't Have A Account?<span class="font-medium text-red-700 cursor-pointer" onclick="Register()">Sign Up</span></p>
+</form>
+<p class="text-sm text-center font-medium dark:text-white flex gap-2 justify-center mt-3">Don't Have A Account?<span class="font-medium text-red-700 cursor-pointer" onclick="Register()">Sign Up</span></p>
 
 </div>
-              </div>
+            </div>
 
 <!-- Modal Register -->
-<div class="hidden flex-col gap-4 transition-all duration-300 ease-in-out bg-[#FFF6F0] dark:bg-Dark" id="Register">
- <div class="font-bold text-black text-3xl cursor-pointer flex justify-end mr-5 mt-4 dark:text-white" onclick="TutupModal()">
-      &times;
-  </div>
-<div class="p-5 flex flex-col">
-  <div class="flex flex-col justify-center items-center gap-3">
-      <img src="../assett/img/Logo Navbar.png" alt="" class="w-[150px]">
-      <h1 class="text-3xl font-bold dark:text-white">Welcome!</h1>
-      <p class="text-sm text-gray-500">Tolong Masukkan Data Diri Anda</p>
-  </div>
-  
-
-      <form action="#" method="GET" class="flex flex-col gap-3 py-2" id="Dokumen">
-          <div class="flex flex-col justify-center items-center gap-2">
-              <label for="email" class="dark:text-white">Email Address</label>
-  <input type="email" name="email" id="AlamatEmail" placeholder="Masukkan Alamat Email" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
-          </div>
-
-          <div class="flex flex-col justify-center items-center gap-2">
-              <label for="email" class="dark:text-white">Password</label>
-  <input type="password" name="password" id="KataSandi" placeholder="Masukkan Password" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
-          </div>
-
-          <div class="flex flex-col justify-center items-center gap-2">
-              <label for="email" class="dark:text-white">Confirm Password</label>
-  <input type="password" name="password" id="KonfirmasiKataSandi" placeholder="Masukkan Password Anda Kembali" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
-          </div>
-<div class="flex flex-row gap-3 mt-4 justify-center items-center">
-  <input type="checkbox" name="checkbox" id="checkbox">
-  <p class="text-sm font-medium dark:text-white">Aku Setuju Untuk Bergabung Dan Melakukan Aktivitas Sesuai Syarat Dan Ketentuan</p>
+<div class="hidden flex-col transition-all duration-300 ease-in-out bg-[#FFF6F0] dark:bg-Dark p-4" id="Register">
+<div class="font-bold text-black text-3xl cursor-pointer flex justify-end mr-5 mt-2 dark:text-white" onclick="TutupModal()">
+    &times;
 </div>
+<div class="flex flex-col">
+<div class="flex flex-col justify-center items-center gap-2">
+    <img src="../assett/img/Logo Navbar.png" alt="" class="w-[100px]">
+    <h1 class="text-3xl font-bold dark:text-white">Welcome!</h1>
+    <p class="text-sm text-gray-500">Tolong Masukkan Data Diri Anda</p>
+</div>
+
+
+    <form action="#" method="GET" class="flex flex-col gap-3" id="Dokumen">
+        <div class="flex flex-col justify-center items-center gap-2">
+            <label for="nama" class="dark:text-white">Nama</label>
+<input type="text" name="nama" id="nama" placeholder="Masukkan Nama Anda" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-2">
+            <label for="email" class="dark:text-white">Email Address</label>
+<input type="email" name="email" id="AlamatEmail" placeholder="Masukkan Alamat Email" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-2">
+            <label for="email" class="dark:text-white">Password</label>
+<input type="password" name="password" id="KataSandi" placeholder="Masukkan Password" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-2">
+            <label for="email" class="dark:text-white">Confirm Password</label>
+<input type="password" name="password" id="KonfirmasiKataSandi" placeholder="Masukkan Password Anda Kembali" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-2">
+            <label for="alamat" class="dark:text-white">Alamat</label>
+<input type="text" name="alamat" id="alamat" placeholder="Masukkan Alamat Email" class="border-2 py-2 rounded-lg hover:border-red-700 w-2/4 text-center">
+        </div>
 
 
 <div class="flex flex-col justify-center items-center">
-      <p class="text-sm font-medium flex gap-2 dark:text-white">Have A Account?<span class="text-red-700 cursor-pointer text-sm font-semibold" onclick="TutupRegister()">Sign In</span></p>
-  
-  <button class="w-24 text-center bg-red-700 mt-5 py-2 text-white rounded-md" type="submit">Register</button>
-              </div>
+    <p class="text-sm font-medium flex gap-2 dark:text-white">Have A Account?<span class="text-red-700 cursor-pointer text-sm font-semibold" onclick="TutupRegister()">Sign In</span></p>
 
-      </form>
-  </div>
+    <p id="errormessage" class="text-red-700 text-center p-4" hidden></p>
+
+<button class="w-24 text-center bg-red-700 mt-5 py-2 text-white rounded-md" type="submit">Register</button>
+            </div>
+
+    </form>
 </div>
-             
-  </section>
+</div>
+           
+</section>
   
   </section>
 
@@ -290,8 +299,8 @@ document.documentElement.classList.remove('dark')
              
   </section>
 <!-- Gambar Menu -->
-<div class="bg-[#C70039] w-full h-[375px] md:h-[1075px] mt-28">
-<img src="../assett/img/fried-chicken-wings-wooden-table.jpg" alt="" class="w-full">
+<div class="bg-[#C70039] w-full h-[295px] md:h-[775px] mt-28">
+<img src="../assett/img/Menu.png" alt="" class="w-full">
 </div>
 
 
@@ -306,28 +315,28 @@ document.documentElement.classList.remove('dark')
             <img src="../assett/img/Fried Chicken.png" alt="" class="w-[300px]">
           </div>
           <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">8K</p>
-          <a href="./Original Fried Chicken.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Original Fried Chicken</a>
+          <a href="./Original Fried Chicken.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Original Fried Chicken</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Winger BBQ 1.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">6K</p>
-            <a href="./Winger BBQ.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Winger BBQ</a>
+            <a href="./Winger BBQ.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Winger BBQ</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Spicy Fried Chicken.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">8K</p>
-            <a href="./Spicy Fried Chicken.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Spicy Fried Chicken</a>
+            <a href="./Spicy Fried Chicken.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Spicy Fried Chicken</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10 p-4 md:p-10">
               <img src="../assett/img/Ayam Geprek23.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">13K</p>
-            <a href="./Ayam Geprek.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Ayam Geprek</a>
+            <a href="./Ayam Geprek.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Ayam Geprek</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
@@ -349,28 +358,28 @@ document.documentElement.classList.remove('dark')
             <img src="../assett/img/Milo.png" alt="" class="w-[300px]">
           </div>
           <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">8K</p>
-          <a href="./Milo.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Milo</a>
+          <a href="./Milo.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Milo</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Sprite.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">9K</p>
-            <a href="./Spirte.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Spirte</a>
+            <a href="./Spirte.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Spirte</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Fanta.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">9K</p>
-            <a href="./Fanta.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Fanta</a>
+            <a href="./Fanta.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Fanta</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Fruit Tea.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">7K</p>
-            <a href="./Fruit Tea.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Fruit Tea Lemon</a>
+            <a href="./Fruit Tea.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Fruit Tea Lemon</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
@@ -393,28 +402,28 @@ document.documentElement.classList.remove('dark')
             <img src="../assett/img/Es Krim Sundae Coklat.png" alt="" class="w-[275px]">
           </div>
           <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">10K</p>
-          <a href="./Sundae Ice Cream.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Sundae Ice Cream</a>
+          <a href="./Sundae Ice Cream.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Sundae Ice Cream</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Strawberry Pudding.png" alt="" class="w-[75px] md:w-[132px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">5K</p>
-            <a href="./Strawberry Pudding.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Strawberry Pudding</a>
+            <a href="./Strawberry Pudding.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Strawberry Pudding</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Muffin.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">4K</p>
-            <a href="./Vanilla Muffin.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Vanilla Muffin</a>
+            <a href="./Vanilla Muffin.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Vanilla Muffin</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Butter Croissaint.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">7K</p>
-            <a href="./Croissaint.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Croissaint</a>
+            <a href="./Croissaint.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Croissaint</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10 p-10">
@@ -437,28 +446,28 @@ document.documentElement.classList.remove('dark')
             <img src="../assett/img/French Fries.png" alt="" class="w-[70px] md:w-[130px]">
           </div>
           <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">12K</p>
-          <a href="./French Fries.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">French Fries</a>
+          <a href="./French Fries.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">French Fries</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Spicy French Fries.png" alt="" class="w-[70px] md:w-[130px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">12K</p>
-            <a href="./Spirte.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Spicy Frnech Fries</a>
+            <a href="./Spirte.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Spicy Frnech Fries</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Nugget.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">15K</p>
-            <a href="./Nugget.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Nuggets</a>
+            <a href="./Nugget.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Nuggets</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
               <img src="../assett/img/Cheese Stick.png" alt="" class="w-[300px]">
             </div>
             <p class="py-1 relative bottom-12 left-4 md:left-32 bg-[#C70039] text-white text-xl font-semibold rounded-md text-center w-10">8K</p>
-            <a href="./Cheese Stick.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center">Cheese Stick</a>
+            <a href="./Cheese Stick.html" class="font-semibold text-lg hover:text-red-600 dark:text-white flex justify-center items-center text-center dark:hover:text-red-600">Cheese Stick</a>
           </div>
           <div class="swiper-slide">
             <div class="flex justify-center w-[135px] md:w-[250px] bg-[#F6EBE3] dark:bg-gray-600 rounded-md mx-auto mt-10">
