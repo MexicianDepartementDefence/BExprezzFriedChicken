@@ -210,3 +210,21 @@ Dokumen.addEventListener("click", (e) => {
 
     }
 })
+
+
+// loading
+    function showLoading() {
+        // Menampilkan elemen loading
+        document.querySelector('.wrapper').style.display = 'block';
+    }
+
+    function hideLoading() {
+        // Menghilangkan elemen loading
+        document.querySelector('.wrapper').style.display = 'none';
+    }
+
+    // Menampilkan loading setelah 3 detik
+    setTimeout(showLoading, 3000);
+    
+    // Menghilangkan loading setelah 3 detik
+    setTimeout(hideLoading, 3000);
