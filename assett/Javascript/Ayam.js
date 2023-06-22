@@ -41,6 +41,41 @@ function TutupModal(){
  document.getElementById("Modal").classList.remove("flex");
 }
 
+// Slider Promo
+let currentSlideID = 1;
+
+let sliderElement = document.getElementById('slider');
+let totalSlides = sliderElement.chlidElementCount;
+
+function next(){
+if (currentSlideID < totalSlides){
+    currentSlideID++;
+    showSlide();
+}
+
+}
+
+function prev(){
+    if(currentSlideID > 2){
+        currentSlideID--;
+        showSlide();
+    }
+
+};
+
+function showSlide(){
+slides = document.getElementById('slider').getElementsByTagName('li');
+for (let index = 0; index < totalSlides; index++){
+    const element = slides[index];
+    if(currentSlideID===index+1){
+        element.classList.remove('hidden');
+    }else
+    {
+        element.classList.add("hidden")
+    }
+}
+}
+
 // Hamburger Menu
 
 let ham = document.getElementById("hamm");
@@ -76,40 +111,6 @@ function menu() {
         document.getElementById("header").classList.remove("bg-white");
         document.getElementById("header").classList.remove("shadow-lg")
     }
-}
-
-// Slider
-// set the default active slide to the first one
-let slideIndex = 1;
-showSlide(slideIndex);
-
-// change slide with the prev/next button
-function moveSlide(moveStep) {
-    showSlide(slideIndex += moveStep);
-}
-
-// change slide with the dots
-function currentSlide(n) {
-    showSlide(slideIndex = n);
-}
-
-function showSlide(n) {
-    let i;
-    const slides = document.getElementsByClassName("slide");
-    const dots = document.getElementsByClassName('dot');
-
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-
-    // hide all slides
-    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.add('hidden');
-    }
-
-
-    // show the active slide
-    slides[slideIndex - 1].classList.remove('hidden');
-
 }
 
 
@@ -210,6 +211,4 @@ Dokumen.addEventListener("click", (e) => {
 
     }
 })
-
-
 

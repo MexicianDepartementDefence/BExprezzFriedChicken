@@ -20,14 +20,14 @@
 </head>
 
 <body class="bg-[#FFF6F0] overflow-x-hidden max-h-screen dark:bg-Dark">
-    
+
     <header class="fixed z-20 top-0 w-full" id="header">
 
         <div class="md:hidden fixed bg-[#FFF6F0] dark:bg-Dark w-0 h-[100vh] text-red-700 shadow-2xl text-lg font-semibold overflow-hidden origin-left duration-500"
             id="hamm">
             <div class="">
                 <a href="./index.html">
-                    <img src="./assett/img/Logo Navbar.png" alt="" class="w-[200px]">
+                    <img src="./assett/img/logo_Footer2-removebg-preview.png" alt="" class="w-[200px]">
                 </a>
 
             </div>
@@ -40,13 +40,13 @@
         </div>
         <div class="bg-[#FFF6F0] dark:bg-Dark">
             <nav class="w-full flex flex-row justify-between items-center py-2 px-5">
-                <a href="./index.html" class="w-[100px] ml-10"><img src="./assett/img/Logo Navbar.png"
+                <a href="./index.html" class="w-[100px] ml-10"><img src="./assett/img/logo_Footer2-removebg-preview.png"
                         alt="">
                 </a>
 
                 <ul class="md:flex flex-row gap-5 items-center hidden">
 
-                    <li><a href="./Web Random/Beranda.html" class="text-red-600">Home</a></li>
+                    <li><a href="./index.html" class="text-red-600">Home</a></li>
 
                     <li><a href="./Web Random/Menu.html" class="text-red-600">Menu</a></li>
 
@@ -106,7 +106,7 @@
                         &times;
                     </div>
                     <div class="mb-2 flex flex-col justify-center items-center gap-2">
-                        <img src="../assett/img/Logo Navbar.png" alt="" class="w-[120px]">
+                        <img src="./assett/img/logo_Footer2-removebg-preview.png" alt="" class="w-[120px]">
                         <h1 class="text-3xl font-bold dark:text-white">Welcome Back</h1>
                         <p class="text-sm text-gray-500">Tolong Masukkan Akun Anda</p>
                     </div>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="flex flex-col">
                         <div class="flex flex-col justify-center items-center gap-2">
-                            <img src="../assett/img/Logo Navbar.png" alt="" class="w-[100px]">
+                            <img src="./assett/img/logo_Footer2-removebg-preview.png" alt="" class="w-[100px]">
                             <h1 class="text-3xl font-bold dark:text-white">Welcome!</h1>
                             <p class="text-sm text-gray-500">Tolong Masukkan Data Diri Anda</p>
                         </div>
@@ -219,52 +219,41 @@
                 </div>
 
     </section>
-    <!-- Promo -->
-    <!-- Slider -->
-    <section id="article" class="mt-24">
 
-
-        <div class="relative w-full md:w-full mx-auto">
-            <div class="slide relative">
-                <a href="./Web Random/Promo1.html">
-                    <img class="w-[800px] md:w-full md:h-[650px] object-cover" src="./assett/img/Banner21.png">
-                </a>
+    <section class="mt-20">
+        <div class="relative">
+            <ul id="slider">
+                <li class="h-[200px] md:h-[600px] relative">
+                    <img src="./assett/img/Banner21.png" alt="" class="w-full object-cover">
+                </li>
+                <li class="h-[200px] md:h-[600px] relative hidden">
+                    <img src="./assett/img/Banner22.png" alt="" class="w-full object-cover">
+                </li>
+                <li class="h-[200px] md:h-[600px] relative hidden">
+                    <img src="./assett/img/Banner23.png" alt="" class="w-full object-cover">
+                </li>
+            </ul>
+            <div class="absolute px-5 flex top-0 left-0 h-full w-full justify-start items-center">
+                <div class="my-auto w-full flex justify-between">
+                    <button onclick="prev()" class="text-white font-bold text-xl bg-[#C70039] p-3 rounded-full text-center">
+                        < 
+                    </button>
+                            <button onclick="next()" class="text-white font-bold text-xl bg-[#C70039] p-3 rounded-full text-center">
+                                >
+                            </button>
+                </div>
 
             </div>
-
-            <div class="slide relative">
-                <a href="./Web Random/Promo2.html">
-                    <img class="w-[800px] md:h-[650px] md:w-full object-cover" src="./assett/img/Banner22.png">
-                </a>
-
-            </div>
-
-            <div class="slide relative">
-                <a href="./Web Random/Promo3.html">
-                    <img class="w-[800px] md:w-full md:h-[650px] object-cover" src="./assett/img/Banner23.png">
-                </a>
-
-            </div>
-            <div class="flex flex-row gap-6 justify-between items-center">
-                <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative left-6 bottom-28 md:bottom-[350px]"
-                    onclick="moveSlide(-1)">
-                    <</a>
-                        <a class="rounded-full w-10 h-10 bg-red-600 text-white text-xl font-bold flex items-center justify-center cursor-pointer relative right-6 bottom-28 md:bottom-[350px]"
-                            onclick="moveSlide(1)">></a>
-            </div>
-
-
-        </div>
         </div>
     </section>
-
     <!-- Menu -->
     <section>
-        <div class="flex flex-col mt-20 justify-center items-center gap-20 mb-20">
+        <div class="flex flex-col justify-center items-center gap-20 mb-5 mt-16">
             <h1 class="text-3xl font-bold text-red-600 dark:text-Yellow">Our Menu</h1>
-            <div class="flex flex-row gap-6 md:gap-20">
+            <div class="flex flex-row gap-5">
                 <div class="flex flex-col items-center gap-4">
-                    <div class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+                    <div
+                        class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#282A3A] shadow-xl md:w-[350px]">
                         <img src="./assett/img/Fried Chicken.png" alt="" class="w-[120px] md:w-[250px]">
 
                     </div>
@@ -273,7 +262,8 @@
 
 
                 <div class="flex flex-col items-center gap-4">
-                    <div class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+                    <div
+                        class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#282A3A] md:w-[350px] shadow-xl">
                         <img src="./assett/img/Desert.png" alt="" class="w-[120px] md:w-[250px]">
 
                     </div>
@@ -281,7 +271,8 @@
                 </div>
 
                 <div class="flex flex-col gap-4 items-center">
-                    <div class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#69718E]">
+                    <div
+                        class="flex justify-center items-center bg-[#F6EBE3] rounded-md dark:bg-[#282A3A] shadow-xl md:w-[350px]">
                         <img src="./assett/img/Drink.png" alt="" class="md:w-[250px] w-[120px]">
 
                     </div>
@@ -295,18 +286,14 @@
         </div>
     </section>
 
-    <div class="bg-gray-200 dark:bg-blue-950 w-full h-4">
-
-    </div>
-
     <section>
-        <div class="flex flex-col justify-center items-center mt-20 gap-10 mb-20">
-            <p class="text-red-600 text-xl font-extrabold">WHAT WE SERVE</p>
-            <h1 class="text-2xl md:text-5xl font-bold dark:text-white text-center">Your Favorite Food Delivery Partner
+        <div class="flex flex-col justify-center items-center mt-20 gap-10 mb-20 bg-[#C70039] p-20">
+            <p class="text-white text-xl font-extrabold">WHAT WE SERVE</p>
+            <h1 class="text-2xl md:text-5xl font-bold text-white text-center">Your Favorite Food Delivery Partner
             </h1>
-            <div class="flex flex-col md:flex-row md:gap-20 gap-8 md:px-0 px-10">
+            <div class="flex flex-col md:flex-row md:gap-20 gap-8 p-10">
                 <div
-                    class="flex flex-col items-center justify-center bg-red-200 gap-3 rounded-md dark:bg-slate-600 p-5">
+                    class="flex flex-col items-center justify-center bg-[#FFF6F0] gap-3 rounded-md dark:bg-[#282A3A] shadow-xl p-5">
                     <img src="./assett/img/Handphone.png" alt="" class="w-[50px] md:w-[100px]">
                     <h3 class="font-bold text-xl dark:text-white text-center">Easy To Order</h3>
                     <p class="font-medium text-sm text-center dark:text-white">You only need a few steps in ordering
@@ -315,8 +302,8 @@
 
                 </div>
                 <div
-                    class="flex flex-col items-center justify-center bg-red-200 gap-3 rounded-md dark:bg-slate-600 p-5">
-                    <img src="./assett/img/Ayam Gojek.png" alt="" class="w-[125px] md:w-[300px]">
+                    class="flex flex-col items-center justify-center bg-[#FFF6F0] rounded-md dark:bg-[#282A3A] gap-3 shadow-xl p-5">
+                    <img src="./assett/img/Ayam Gojek.png" alt="" class="w-[125px] md:w-[250px]">
                     <h3 class="font-bold text-xl dark:text-white text-center md">Fastest Delivery</h3>
                     <p class="font-medium text-sm text-center dark:text-white">Delivery that is always ontime
                         even faster.</p>
@@ -325,8 +312,8 @@
                 </div>
 
                 <div
-                    class="flex flex-col items-center justify-center bg-red-200 gap-3 rounded-md dark:bg-slate-600 p-5">
-                    <img src="./assett/img/Ember Ayam.png" alt="" class="w-[125px] md:w-[200px]">
+                    class="flex flex-col items-center justify-center bg-[#FFF6F0] gap-3 rounded-md dark:bg-[#282A3A] p-5 shadow-xl">
+                    <img src="./assett/img/Ember Ayam.png" alt="" class="w-[125px] md:w-[185px]">
                     <h3 class="font-bold text-xl dark:text-white text-center md:text-start">Best Quality</h3>
                     <p class="font-medium text-sm text-center dark:text-white">Not only fast for us quality is also
                         number one.</p>
@@ -337,10 +324,6 @@
 
     </section>
 
-    <div class="bg-gray-200 dark:bg-blue-950 w-full h-4">
-
-    </div>
-
     <!-- Testimoni -->
 
     <section class="mt-20 mb-20">
@@ -348,11 +331,11 @@
         <h1 class="text-center text-5xl font-bold dark:text-white">Here Are Some Comments About Us</h1>
 
         <!-- Swiper -->
-        <div class="swiper mySwiper w-full h-[400px] md:h-[275px] mt-28">
-            <div class="swiper-wrapper gap-16 mx-10">
-                <div class="swiper-slide bg-red-200 mx-auto">
+        <div class="swiper mySwiper w-full h-[400px] md:h-[300px] mt-28 mb-20">
+            <div class="swiper-wrapper gap-16 md:gap-8 mx-10 h-[300px]">
+                <div class="swiper-slide bg-[#FFF6F0] dark:bg-[#282A3A] shadow-xl rounded-lg mx-auto">
                     <div class="flex flex-col gap-4">
-                        <div class="flex justify-center p-4 md:p-0">
+                        <div class="flex justify-center p-4 md:p-4">
                             <img src="./assett/img/revardi-syahputra-200.png" alt=""
                                 class="w-14 md:w-20 border-[3px] border-red-600 rounded-[100%]">
                         </div>
@@ -380,9 +363,9 @@
                             "Makanannya Enak, Desertnya Enak, Tempatnya Nyaman Rekomended Dah Asli"</p>
                     </div>
                 </div>
-                <div class="swiper-slide bg-red-200 mx-auto">
-                    <div class="flex flex-col gap-4 p-4 md:p-0">
-                        <div class="flex justify-center">
+                <div class="swiper-slide bg-[#FFF6F0] dark:bg-[#282A3A] rounded-lg shadow-xl mx-auto">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-center p-4 md:p-4">
                             <img src="./assett/img/img4.png" alt="" class="w-14 md:w-20 border-red-600 rounded-[100%]">
                         </div>
                         <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Putri Intan</h1>
@@ -411,9 +394,9 @@
                             kesini 👍👍</p>
                     </div>
                 </div>
-                <div class="swiper-slide bg-red-200 mx-auto">
-                    <div class="flex flex-col gap-4">
-                        <div class="flex justify-center">
+                <div class="swiper-slide bg-[#FFF6F0] dark:bg-[#282A3A] rounded-lg shadow-lg mx-auto">
+                    <div class="flex flex-col gap-4 ">
+                        <div class="flex justify-center p-4">
                             <img src="./assett/img/annas-ahmad-200.png" alt=""
                                 class="w-14 md:w-20 border-[3px] border-red-600 rounded-[100%]">
                         </div>
@@ -437,13 +420,13 @@
 
 
                         </div>
-                        <p class="text-sm md:text-lg font-medium italic text-center dark:text-white px-2">"Bikin
+                        <p class="text-sm md:text-lg font-medium italic text-center px-2 dark:text-white">"Bikin
                             Ketagihan Buat Makan, Tempat Nyaman, Ada Wifi Komplit Dah"</p>
                     </div>
                 </div>
-                <div class="swiper-slide bg-red-200 mx-auto">
+                <div class="swiper-slide bg-[#FFF6F0] dark:bg-[#282A3A] rounded-lg shadow-xl mx-auto">
                     <div class="flex flex-col gap-4">
-                        <div class="flex justify-center">
+                        <div class="flex justify-center p-4">
                             <img src="./assett/img/img3.png" alt="" class="w-14 md:w-20 border-red-600 rounded-[100%]">
                         </div>
                         <h1 class="text-center text-base md:text-lg font-bold dark:text-white">Ellena</h1>
@@ -471,9 +454,9 @@
                             enak banget👍💖"</p>
                     </div>
                 </div>
-                <div class="swiper-slide bg-red-200 mx-auto">
+                <div class="swiper-slide mx-auto bg-[#FFF6F0] dark:bg-[#282A3A] shadow-xl rounded-lg">
                     <div class="flex flex-col gap-4">
-                        <div class="flex justify-center">
+                        <div class="flex justify-center p-4">
                             <img src="./assett/img/img1.jpeg" alt=""
                                 class="w-14 md:w-20 border-[3px] border-red-600 rounded-[100%]">
                         </div>
@@ -503,32 +486,65 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </section>
 
+    <footer
+        class="bg-[#FAF0E4] dark:bg-[#404258] flex flex-col md:flex-row justify-between items-center w-full mt-3 p-5">
+        <div class="flex flex-col md:flex-row justify-around items-center w-full md:gap-0 gap-20">
+            <div class="flex flex-col gap-4 md:justify-start md:items-start justify-center items-center">
+                <div class="">
+                    <img src="./assett/img/logo_Footer2-removebg-preview.png" alt="" class="w-[300px] md:mr-0 mr-10">
+                </div>
+                <p class="md:ml-10 font-medium text-xs text-[#4B4B4B] dark:text-white">Hubungi Kami</p>
+                <p class="md:ml-10 font-medium text-xs text-[#4B4B4B] dark:text-white">Tentang Kami</p>
+                <p class="md:ml-10 font-medium text-xs text-[#4B4B4B] dark:text-white">Newsroom</p>
+            </div>
+
+            <div class="flex flex-col gap-7 md:mb-16 md:justify-start md:items-start justify-center items-center">
+                <p class="text-lg font-bold dark:text-white">Hubungi Kami</p>
+                <div class="flex flex-row gap-5">
+                    <img src="./assett/img/Whatsapp.png" alt="" class="w-[50px]">
+                    <img src="./assett/img/Instagram.png" alt="" class="w-[50px]">
+                    <img src="./assett/img/Facebook2.png" alt="" class="w-[50px]">
+                    <img src="./assett/img/Twitter2.png" alt="" class="w-[50px]">
+                </div>
+                <div class="flex flex-row gap-3">
+                    <img src="./assett/img/Google Play.png" alt="" class="w-[120px] rounded-[10px]">
+                    <img src="./assett/img/App Store.png" alt="" class="w-[120px] rounded-[10px]">
+                </div>
+            </div>
 
 
-    <footer class="bg-[#C70039] flex flex-col md:flex-row justify-between items-center px-40 gap-6 md:gap-0">
-        <div class="w-[250px]"><img src="./assett/img/Logo Footer.png" alt=""></div>
-        <div class="flex flex-col gap-6 p-6 border-white border-l-0 md:border-l-8 border-t-8 md:border-t-0">
-            <div class="flex flex-row gap-5">
-                <a href="" class="text-white text-5xl hover:text-purple-500"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" class="text-white text-5xl hover:text-blue-500"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class="text-white text-5xl hover:text-green-500"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="flex flex-col md:mb-16 gap-5 md:justify-start md:items-start justify-center items-center">
+                <p class="text-lg font-bold dark:text-white">Berlangganan Newsletter Fried Chicken B'Exprezz
+                <p>
+                <div class="flex flex-row">
+                    <input type="text" class="py-2 text-base font-medium bg-[#FFFFFF] text-[#B0B0B0] px-4"
+                        placeholder="Masukan Email anda">
+                    <input type="button" value="Daftar" class="text-white bg-[#C70039] px-5">
+
+                </div>
+                <p class="text-lg font-medium text-center dark:text-white">H36h+X24p, Cibarusa kota,
+                    Kec.cibarusa,kab.bekasi,jawabarat17340</p>
             </div>
-            <div class="text-sm md:text-lg text-white">
-                <p>Jl. Raya Cibarusah, Kabupaten Bekasi</p>
-            </div>
+
+        </div>
 
     </footer>
+    <div class="bg-[#ECECEC] w-full max-h-14 p-5">
+        <p class="relative left-32 text-[#3C4048] text-[15px] font-medium">&copy; 2023 Fried Chicken B'Exprezz</p>
+
+    </div>
 
 
 </body>
 
 <script src="./assett/Javascript/Ayam.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 <script>
 
     var swiper = new Swiper(".mySwiper", {
@@ -538,6 +554,10 @@
             el: ".swiper-pagination",
             clickable: true,
         },
+        autoplay: {
+            delay: 5000,
+        },
+
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
